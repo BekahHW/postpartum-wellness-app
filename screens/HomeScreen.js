@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 import { Button } from 'react-native-paper'
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView
@@ -21,7 +21,7 @@ export default function HomeScreen() {
           <Button
             style={styles.button}
             mode="contained"
-            onPress={() => console.log('Pressed')}
+            onPress={() => navigation.navigate('SignIn')}
           >
             Sign-In
           </Button>
