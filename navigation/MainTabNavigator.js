@@ -8,6 +8,7 @@ import {
 import TabBarIcon from '../components/TabBarIcon'
 import HomeScreen from '../screens/HomeScreen'
 import SignInScreen from '../screens/SignInScreen'
+import ResourcesScreen from '../screens/ResourcesScreen'
 import LinksScreen from '../screens/LinksScreen'
 import SettingsScreen from '../screens/SettingsScreen'
 
@@ -19,7 +20,8 @@ const config = Platform.select({
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
-    SignIn: SignInScreen
+    SignIn: SignInScreen,
+    Resources: ResourcesScreen
   },
   { initialRouteName: 'Home' },
   config
