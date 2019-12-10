@@ -8,8 +8,10 @@ import {
 import TabBarIcon from '../components/TabBarIcon'
 import HomeScreen from '../screens/HomeScreen'
 import SignInScreen from '../screens/SignInScreen'
+import DayPromptScreen from '../screens/DayPromptScreen'
 import LinksScreen from '../screens/LinksScreen'
 import SettingsScreen from '../screens/SettingsScreen'
+import ResourcesScreen from '../screens/ResourcesScreen'
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -19,7 +21,9 @@ const config = Platform.select({
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
-    SignIn: SignInScreen
+    SignIn: SignInScreen,
+    Resources: ResourcesScreen,
+    HowWasYourDay: DayPromptScreen
   },
   { initialRouteName: 'Home' },
   config
