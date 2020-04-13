@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
-export default function SignInScreen({ navigation }) {
+export default function SignUpScreen({ navigation }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
