@@ -46,16 +46,25 @@ export default function ProfileScreen({ navigation }) {
         <TextInput
           style={styles.textInput}
           mode="outlined"
-          label="Password"
-          value={password}
-          onChangeText={(text) => setPassword(text)}
+          label="Age"
+          value={age}
+          onChangeText={(text) => setAge(text)}
           secureTextEntry={true}
           onSubmitEditing={() => console.log("submit")}
         />
         <TextInput
           style={styles.textInput}
           mode="outlined"
-          label="Re-enter password for validation"
+          label="previousMentalHealth"
+          value={password}
+          onChangeText={(text) => setPreviousMentalHealth(text)}
+          secureTextEntry={true}
+          onSubmitEditing={() => console.log("submit")}
+        />
+        <TextInput
+          style={styles.textInput}
+          mode="outlined"
+          label="previousMentalHealth"
           value={password}
           onChangeText={(text) => setPassword(text)}
           secureTextEntry={true}
