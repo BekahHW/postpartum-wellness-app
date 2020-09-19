@@ -28,7 +28,7 @@ export default function HomeScreen({ navigation }) {
           <Button
             style={styles.button}
             mode="contained"
-            onPress={() => console.log("Pressed")}
+            onPress={() => navigation.navigate("SignIn")}
           >
             Sign-Up
           </Button>
