@@ -15,7 +15,7 @@ import {
 } from "../types";
 import HomeScreen from "../screens/HomeScreen";
 import ResourcesScreen from "../screens/ResourcesScreen";
-import ProfileScreen from "../screens/ProfileScreen";
+import ProfileScreen from "../screens/CreateProfileScreen";
 
 const config = Platform.select({
   web: { headerMode: "screen" },
