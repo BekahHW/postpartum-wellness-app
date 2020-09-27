@@ -81,10 +81,8 @@ Beginner issues - issues which should only require a few lines of code, and a te
 Help wanted issues - issues which should be a bit more involved than beginner issues.
 Both issue lists are sorted by total number of comments. While not perfect, number of comments is a reasonable proxy for impact a given change will have.
 
-If you want to read about using the Postpartum Wellness App or developing packages in the Postpartum Wellness App, the the Postpartum Wellness App Flight Manual is free and available online. You can find the source to the manual in the Postpartum Wellness App/flight-manual.the Postpartum Wellness App.io.
-
 Local development
-The Postpartum Wellness App Core and all packages can be developed locally. For instructions on how to do this, see the following sections in the the Postpartum Wellness App Flight Manual:
+The Postpartum Wellness App and all packages can be developed locally.
 
 Hacking on the Postpartum Wellness App Core
 Contributing to Official the Postpartum Wellness App Packages
@@ -109,25 +107,6 @@ Use the present tense ("Add feature" not "Added feature")
 Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
 Limit the first line to 72 characters or less
 Reference issues and pull requests liberally after the first line
-When only changing documentation, include [ci skip] in the commit title
-Consider starting the commit message with an applicable emoji:
-🎨 :art: when improving the format/structure of the code
-🐎 :racehorse: when improving performance
-🚱 :non-potable_water: when plugging memory leaks
-📝 :memo: when writing docs
-🐧 :penguin: when fixing something on Linux
-🍎 :apple: when fixing something on macOS
-🏁 :checkered_flag: when fixing something on Windows
-🐛 :bug: when fixing a bug
-🔥 :fire: when removing code or files
-💚 :green_heart: when fixing the CI build
-✅ :white_check_mark: when adding tests
-🔒 :lock: when dealing with security
-⬆️ :arrow_up: when upgrading dependencies
-⬇️ :arrow_down: when downgrading dependencies
-👕 :shirt: when removing linter warnings
-JavaScript Styleguide
-All JavaScript must adhere to JavaScript Standard Style.
 
 Prefer the object spread operator ({...anotherObj}) to Object.assign()
 Inline exports with expressions whenever possible
