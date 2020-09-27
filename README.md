@@ -58,4 +58,4 @@ This is an inclusive space for education, learning and healthy communication. We
 
 # Contact
 
-The primary way to communicate about this projects is through issues, but you can also reach me at [@bekahhw](https://twitter.com/BekahHW) on Twitter.
+The primary way to communicate about this project is through issues, but you can also reach me at [@bekahhw](https://twitter.com/BekahHW) on Twitter.
