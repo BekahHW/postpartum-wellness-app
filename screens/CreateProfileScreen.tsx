@@ -18,8 +18,8 @@ export default function ProfileScreen() {
   const [previousMentalHealth, setPreviousMentalHealth] = useState("");
   const [babyDob, setBabyDOB] = useState("");
   const [birthExperience, setBirthExperience] = useState("");
-  const [partner, setPartner] = useState("");
-  const [supportNetwork, setSupportNetwork] = useState("");
+  const [partner, setPartner] = useState(false);
+  const [supportNetwork, setSupportNetwork] = useState(false);
   const [immediateSupport, setImmediateSupport] = useState({
     supportName: "",
     supportEmail: "",
@@ -27,7 +27,7 @@ export default function ProfileScreen() {
   });
   const [destressors, setDestressors] = useState([]);
   const [socioeconomicStatus, setSocioeconomicStatus] = useState("");
-  const [breastfeeding, setBreastfeeding] = useState("");
+  const [breastfeeding, setBreastfeeding] = useState(false);
   const [race, setRace] = useState("");
 
   return (
