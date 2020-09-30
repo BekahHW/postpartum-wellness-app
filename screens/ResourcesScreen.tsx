@@ -18,7 +18,6 @@ export default function ResourcesScreen() {
         </View>
         <View>
           <Text style={styles.getStartedText}>Resources for moms:</Text>
-          {/* <Text style={styles.getStartedText}>post-partum support:</Text> */}
           <Text
             style={styles.linkText}
             onPress={() =>
