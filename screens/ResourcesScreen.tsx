@@ -27,7 +27,7 @@ export default function ResourcesScreen() {
               )
             }
           >
-            https://www.postpartum.net/get-help/help-for-moms/
+            Postpartum Help for Moms
           </Text>
         </View>
         <View>
@@ -40,7 +40,7 @@ export default function ResourcesScreen() {
               )
             }
           >
-            https://www.postpartum.net/get-help/resources-for-fathers/dads-mental-health/
+            Help for Dads during the Postpartum Period
           </Text>
         </View>
       </View>
