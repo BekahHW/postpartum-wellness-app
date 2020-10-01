@@ -59,4 +59,5 @@ This is an inclusive space for education, learning and healthy communication. We
 
 The primary way to communicate about this project is through issues, but you can also reach me at [@bekahhw](https://twitter.com/BekahHW) on Twitter.
 
+[![Virtual Coffee](https://img.shields.io/badge/Virtual-Coffee-red)](https://virtualcoffee.io)
 [![runs with expo](https://img.shields.io/badge/Runs%20with%20Expo-4630EB.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000)](https://expo.io/)
