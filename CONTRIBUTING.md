@@ -3,6 +3,7 @@
 Thank you for taking the time to contribute! Your contribution will hopefully work towards improving the lives of postpartum women, and your time is greatly appreciated.
 
 ## How Can I Contribute?
+
 There are two ways to contribute: working on an issue and submitting a pull request when complete (if you're new to submitting a pull request, [this video](https://www.youtube.com/watch?v=n5tXiZ3U4Xk&feature=youtu.be) walks you through the steps of the first PR for this app) or submitting a bug report.
 
 This section guides you through submitting a bug report for the Postpartum Wellness App. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior, and find related reports.
@@ -11,55 +12,52 @@ Before creating bug reports, please check this list as you might find out that y
 
 Note: If you find a Closed issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
 
-### Before Submitting A Bug Report
-Check the debugging guide. You might be able to find the cause of the problem and fix things yourself. Most importantly, check if you can reproduce the problem in the latest version of the Postpartum Wellness App, if the problem happens when you run the Postpartum Wellness App in safe mode, and if you can get the desired behavior by changing the Postpartum Wellness App's or packages' config settings.
+# What type of contributions we're looking for.
 
-Perform a cursory search to see if the problem has already been reported. If it has and the issue is still open, add a comment to the existing issue instead of opening a new one.
+This is an open source project and we love to receive contributions from our community — you! There are many ways to contribute,
+from writing tutorials or blog posts, improving the documentation, submitting bug reports and feature requests,
+or writing code which can be incorporated into the application codebase itself. Please note, that if an issue has a label with Good First Issue, those are reserved for contributors new to development.
 
-### How Do I Submit A (Good) Bug Report?
-Bugs are tracked as GitHub issues. Create an issue and provide the following information by filling in the template:
+# Asking to Pair
 
-1. Explain the problem and include additional details to help maintainers reproduce the problem:
+This is a beginner friendly repo. Contributors can request a pairing (zoom/google hangouts) to pair with a maintainer on tackling an issue/submitting a PR/etc. If you want to do it for a pre-existing issue, simple indicate so in a comment under that issue. If not, you may open a new Question issue and request a pairing.
 
-1. Use a clear and descriptive title for the issue to identify the problem.
+## Awaiting Review
 
-1. Describe the exact steps that reproduce the problem in as many details as possible. For example, start by explaining how you started the Postpartum Wellness App, e.g. which command exactly you used in the terminal, or how you started the Postpartum Wellness App otherwise. When listing steps, don't just say what you did, but explain how you did it. For example, if you moved the cursor to the end of a line, explain if you used the mouse, or a keyboard shortcut or an the Postpartum Wellness App command, and if so which one.
+Once you've submitted your pull request, the only thing left is to wait from feedback from one of the project maintainers. Since this is volunteer work for all of course, we ask for patience if you don't see a response immediately. Sometimes it takes about a day for someone's schedule to clear up to have the sit to properly review incoming PRs. We'd rather not rush a response after someone has put time and effort into submitted. If it's been over **one week** and you haven't received any acknowledgement, you can post a comment on your PR reminding of it's status. If **two weeks** have passed with no feedback, you can email the project maintainer at rhawrot@gmail.com.
 
-1. Describe the behavior you observed after following the steps and point out what exactly is the problem with that behavior.
+If the PR looks good, a maintainer will typically give feedback and merge the request immediately, otherwise they'll let you know what questions they have or what needs to change before your work can be accepted. Once it is, you'll see your changes on the main branch and VOILA, open source contribution complete!
 
-1. Explain which behavior you expected to see instead and why.
+## Tips and Gotchas
 
-1. Include screenshots and animated GIFs which show you following the described steps and clearly demonstrate the problem. If you use the keyboard while following the steps, record the GIF with the Keybinding Resolver shown. You can use this tool to record GIFs on macOS and Windows, and this tool or this tool on Linux.
+This section is just little notes and bits of info that can smooth over some of the bumps and hiccups that can come along with contribution.
 
-1. If you're reporting that the Postpartum Wellness App crashed, include a crash report with a stack trace from the operating system. On macOS, the crash report will be available in Console.app under "Diagnostic and usage information" > "User diagnostic reports". Include the crash report in the issue in a code block, a file attachment, or put it in a gist and provide link to that gist.
-If the problem is related to performance or memory, include a CPU profile capture with your report.
-If Chrome's developer tools pane is shown without you triggering it, that normally means that you have a syntax error in one of your themes or in your styles.less. Try running in Safe Mode and using a different theme or comment out the contents of your styles.less to see if that fixes the problem.
+- While this isn't absolutely required, we highly recommend **associating your Pull Requests with the Issue that they're intended to address**. This makes review much easier and avoids confusion when looking back at past commits. Github allows you to link a PR to an issue both during and after the PR's creation (the option should located in rightmost panel of the github PR interface).
+- **Please do not hesitate to ask for help** in any part of this process if you feel confused. As soon as they can, project maintainers can try and get you through the parts which are confusing you. Just be aware that no one here is a github expert :), we're just folks happy and willing to help others get some experience.
+- Be extra careful when working with git in the command line. Incorrectly typed names or commands can have strange results, and navigating git issues can be very perplexing. Fortunately, there's a plethora of resources on fixing said issues, and rest assured that any error you make has already been done, and solved, by someone.
 
-1. If the problem wasn't triggered by a specific action, describe what you were doing before the problem happened and share more information using the guidelines below.
-Provide more context by answering these questions:
+That's all for now. If you feel like anything is missing from this document that you wish were included, let us know. Or hey, open up a fresh issue and take a shot at helping us make it better!
 
-1. Can you reproduce the problem in safe mode? Did the problem start happening recently (e.g. after updating to a new version of the Postpartum Wellness App) or was this always a problem?
+# Reporting a bug
 
-1. If the problem started happening recently, can you reproduce the problem in an older version of the Postpartum Wellness App? What's the most recent version in which the problem doesn't happen?
+If you find a **critical security vulnerability**, do NOT open an issue. Email rhawrot@gmail.com instead.
 
-1. Can you reliably reproduce the issue? If not, provide details about how often the problem happens and under which conditions it normally happens.
+For any other bug, we have a bug report template already created for your use. Just select it when opening up an issue on github and follow the headers to formulating your issue.
 
-1. If the problem is related to working with files (e.g. opening and editing files), does the problem happen for all files and projects or only some? Does the problem happen only when working with local or remote files (e.g. on network drives), with files of a specific type (e.g. only JavaScript, with large files or files with very long lines, or with files in a specific encoding? Is there anything else special about the files you are using?
+When filing an issue, make sure to answer these three questions:
 
-1. Include details about your configuration and environment:
-What's the name and version of the OS you're using?
-Are you running the Postpartum Wellness App in a virtual machine? If so, which VM software are you using and which operating systems and versions are used for the host and the guest?
-Which packages do you have installed? You can get that list by running apm list --installed.
-Are you using local configuration files config.cson, keymap.cson, snippets.cson, styles.less and init.coffee to customize the Postpartum Wellness App? If so, provide the contents of those files, preferably in a code block or with a link to a gist.
-Are you using the Postpartum Wellness App with multiple monitors? If so, can you reproduce the problem when you use a single monitor?
-Which keyboard layout are you using? Are you using a US layout or some other layout?
+- What did you do?
+- What did you expect to see?
+- What did you see instead?
 
 ### Suggesting Enhancements
+
 This section guides you through submitting an enhancement suggestion for the Postpartum Wellness App, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion and find related suggestions.
 
 Before creating enhancement suggestions, please check this list as you might find out that you don't need to create one. When you are creating an enhancement suggestion, please include as many details as possible. Fill in the template, including the steps that you imagine you would take if the feature you're requesting existed.
 
 ### How Do I Submit A (Good) Enhancement Suggestion?
+
 Enhancement suggestions are tracked as GitHub issues. Create an issue on that repository and provide the following information:
 
 Use a clear and descriptive title for the issue to identify the suggestion.
@@ -75,6 +73,7 @@ List some other applications where this enhancement exists.
 Specify the name and version of the OS you're using.
 
 ## Your First Code Contribution
+
 Unsure where to begin contributing to the Postpartum Wellness App? You can start by looking through these beginner and help-wanted issues:
 
 Beginner issues - issues which should only require a few lines of code, and a test or two.
@@ -84,52 +83,6 @@ Both issue lists are sorted by total number of comments. While not perfect, numb
 Local development
 The Postpartum Wellness App and all packages can be developed locally.
 
-Hacking on the Postpartum Wellness App Core
-Contributing to Official the Postpartum Wellness App Packages
-Pull Requests
-The process described here has several goals:
-
-Maintain the Postpartum Wellness App's quality
-Fix problems that are important to users
-Engage the community in working toward the best possible the Postpartum Wellness App
-Enable a sustainable system for the Postpartum Wellness App's maintainers to review contributions
-Please follow these steps to have your contribution considered by the maintainers:
-
-Follow all instructions in the template
-Follow the styleguides
-After you submit your pull request, verify that all status checks are passing
-What if the status checks are failing?
-While the prerequisites above must be satisfied prior to having your pull request reviewed, the reviewer(s) may ask you to complete additional design work, tests, or other changes before your pull request can be ultimately accepted.
-
-### Styleguides
-Git Commit Messages
-Use the present tense ("Add feature" not "Added feature")
-Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
-Limit the first line to 72 characters or less
-Reference issues and pull requests liberally after the first line
-
-Prefer the object spread operator ({...anotherObj}) to Object.assign()
-Inline exports with expressions whenever possible
-// Use this:
-export default class ClassName {
-
-}
-
-// Instead of:
-class ClassName {
-
-}
-export default ClassName
-
-Place requires in the following order:
-Built in Node Modules (such as path)
-Built in the Postpartum Wellness App and Electron Modules (such as the Postpartum Wellness App, remote)
-Local Modules (using relative paths)
-Place class properties in the following order:
-Class methods and properties (methods starting with static)
-Instance methods and properties
-Avoid platform-dependent code
-
 ## Attribution
 
-This Contribution Guideline is adapted from the [Atom Contribution Guidelines](https://github.com/atom/atom/blob/master/CONTRIBUTING.md)
+This Contribution Guideline is adapted from the [Atom Contribution Guidelines](https://github.com/atom/atom/blob/master/CONTRIBUTING.md) and from [tkshill's Quarto](https://github.com/tkshill/Quarto/blob/main/CONTRIBUTING.md)
