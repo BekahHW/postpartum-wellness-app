@@ -18,6 +18,8 @@ This is an open source project and we love to receive contributions from our com
 from writing tutorials or blog posts, improving the documentation, submitting bug reports and feature requests,
 or writing code which can be incorporated into the application codebase itself. Please note, that if an issue has a label with Good First Issue, those are reserved for contributors new to development.
 
+Once you've commented on an issue to say you'd like to work on it, wait for a response from the maintainer before you begin working.
+
 # Asking to Pair
 
 This is a beginner friendly repo. Contributors can request a pairing (zoom/google hangouts) to pair with a maintainer on tackling an issue/submitting a PR/etc. If you want to do it for a pre-existing issue, simple indicate so in a comment under that issue. If not, you may open a new Question issue and request a pairing.
