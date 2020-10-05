@@ -25,14 +25,14 @@ export default function HomeScreen({
           <Button
             style={styles.button}
             mode="contained"
-            onPress={() => navigation.replace("Root")}
+            onPress={() => navigation.replace("SignIn")}
           >
             Sign-In
           </Button>
           <Button
             style={styles.button}
             mode="contained"
-            onPress={() => navigation.replace("Root")}
+            onPress={() => navigation.replace("SignUp")}
           >
             Sign-Up
           </Button>
