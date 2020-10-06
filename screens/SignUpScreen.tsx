@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     minWidth: 200,
-    height: 64,
+    maxHeight: 64,
     justifyContent: "center",
     marginBottom: 8,
   },
