@@ -1,8 +1,10 @@
+import {StackScreenProps} from "@react-navigation/stack";
 import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
+import {RootStackParamList} from "../types";
 
-export default function SignUpScreen({ navigation }) {
+export default function SignUpScreen({ navigation }: StackScreenProps<RootStackParamList, "SignUp">) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -40,7 +42,7 @@ export default function SignUpScreen({ navigation }) {
         <Button
           style={styles.button}
           mode="contained"
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("Root")}
         >
           Sign-Up!
         </Button>
@@ -49,7 +51,7 @@ export default function SignUpScreen({ navigation }) {
   );
 }
 
-SignInScreen.navigationOptions = {
+SignUpScreen.navigationOptions = {
   header: null,
 };
 
@@ -74,7 +76,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     minWidth: 200,
-    height: 64,
+    maxHeight: 64,
     justifyContent: "center",
     marginBottom: 8,
   },
