@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 import SignInScreen from "./SignInScreen";
 // Name, age, sex, race,
@@ -32,41 +32,47 @@ export default function ProfileScreen() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.getStartedContainer}>
-        <Text style={styles.getStartedText}>Postpartum Wellness Profile</Text>
-        <TextInput
-          style={styles.textInput}
-          mode="outlined"
-          label="Name"
-          value={name}
-          onChangeText={(text) => setName(text)}
-        />
-
-        <TextInput
-          style={styles.textInput}
-          mode="outlined"
-          label="Age"
-          value={age}
-          onChangeText={(text) => setAge(text)}
-          secureTextEntry={true}
-        />
-        <TextInput
-          style={styles.textInput}
-          mode="outlined"
-          label="previousMentalHealth"
-          value={previousMentalHealth}
-          onChangeText={(text) => setPreviousMentalHealth(text)}
-          secureTextEntry={true}
-        />
-
-        <Button
-          style={styles.button}
-          mode="contained"
-          onPress={() => console.log("submit")}
+      <ScrollView
+        style={styles.container}
+        contentContainerStyle={styles.contentContainer}
         >
-          Create My Profile!
-        </Button>
-      </View>
+        <View style={styles.getStartedContainer}>
+          <Text style={styles.getStartedText}>Postpartum Wellness Profile</Text>
+          <TextInput
+            style={styles.textInput}
+            mode="outlined"
+            label="Name"
+            value={name}
+            onChangeText={(text) => setName(text)}
+          />
+
+          <TextInput
+            style={styles.textInput}
+            mode="outlined"
+            label="Age"
+            value={age}
+            onChangeText={(text) => setAge(text)}
+            secureTextEntry={true}
+          />
+          <Text style={styles.describe}>How you were feeling before your pregnancy?</Text>
+          <TextInput
+            style={styles.textInput}
+            mode="outlined"
+            label="Describe moods, mental health"
+            value={previousMentalHealth}
+            onChangeText={(text) => setPreviousMentalHealth(text)}
+            secureTextEntry={true}
+          />
+
+          <Button
+            style={styles.button}
+            mode="contained"
+            onPress={() => console.log("submit")}
+          >
+            Create My Profile!
+          </Button>
+        </View>
+      </ScrollView>
     </View>
   );
 }
@@ -78,12 +84,14 @@ SignInScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    backgroundColor: "#fff",
+  },
+  contentContainer: {
+    flex: 1,
+    paddingTop: 30,
     backgroundColor: "#fff",
   },
   getStartedContainer: {
-    alignItems: "center",
     justifyContent: "center",
     marginHorizontal: 50,
   },
@@ -102,7 +110,15 @@ const styles = StyleSheet.create({
   },
   button: {
     minWidth: 200,
+    height: 64,
+    justifyContent: "center",
     marginBottom: 16,
     marginTop: 8,
   },
+  describe: {
+    fontSize: 16,
+    color: "rgba(96,100,109, 1)",
+    marginBottom: 5,
+    marginTop: 5,
+  }
 });
