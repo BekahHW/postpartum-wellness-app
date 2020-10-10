@@ -28,6 +28,32 @@ export default function ResourcesScreen() {
           >
             Postpartum Help for Moms
           </Text>
+          <Text
+            style={styles.linkText}
+            onPress={() =>
+              Linking.openURL(
+                "https://www.birthtraumaassociation.org.uk/for-parents/"
+              )
+            }
+          >
+            Support for Women Who Suffer Birth Trauma
+          </Text>
+          <Text
+            style={styles.linkText}
+            onPress={() =>
+              Linking.openURL(
+                "https://healthyfamilies.beyondblue.org.au/pregnancy-and-new-parents/maternal-mental-health-and-wellbeing/mental-health-checklist-for-mums"
+              )
+            }
+          >
+            Maternal Mental Health and Wellbeing
+          </Text>
+          <Text
+            style={styles.linkText}
+            onPress={() => Linking.openURL("https://www.panda.org.au/")}
+          >
+            Support on Mental Health of Expecting and New Parents
+          </Text>
         </View>
         <View>
           <Text style={styles.getStartedText}>Support for dads:</Text>
