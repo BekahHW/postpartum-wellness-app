@@ -24,7 +24,12 @@ If any of that sounds interesting, don't hesitate to take a look at one of our [
    `yarn global add expo-cli`
 3. [Fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) this repo
 4. Create a local copy on your machine
-5. In a shell terminal/command line
+5. In a shell terminal/command line run:
+
+```
+yarn 
+```
+
 6. Run the live development server with:
 
 ```
