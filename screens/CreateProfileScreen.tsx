@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { StyleSheet, Text, View, ScrollView, Switch } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 import SignInScreen from "./SignInScreen";
 // Name, age, sex, race,
@@ -30,12 +30,18 @@ export default function ProfileScreen() {
   const [breastfeeding, setBreastfeeding] = useState(false);
   const [race, setRace] = useState("");
 
+  function toggleSwitch(input: {
+    (value: React.SetStateAction<boolean>): void;
+    (arg0: (previousState: any) => boolean): void;
+  }) {
+    input((previousState) => !previousState);
+  }
   return (
     <View style={styles.container}>
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}
-        >
+      >
         <View style={styles.getStartedContainer}>
           <Text style={styles.getStartedText}>Postpartum Wellness Profile</Text>
           <TextInput
@@ -54,7 +60,9 @@ export default function ProfileScreen() {
             onChangeText={(text) => setAge(text)}
             secureTextEntry={true}
           />
-          <Text style={styles.describe}>How you were feeling before your pregnancy?</Text>
+          <Text style={styles.describe}>
+            How you were feeling before your pregnancy?
+          </Text>
           <TextInput
             style={styles.textInput}
             mode="outlined"
@@ -63,11 +71,32 @@ export default function ProfileScreen() {
             onChangeText={(text) => setPreviousMentalHealth(text)}
             secureTextEntry={true}
           />
+          <Text style={styles.describe}>
+            Do you have a support system (family, moms group, etc.)
+          </Text>
+          <Switch
+            onValueChange={() => toggleSwitch(setSupportNetwork)}
+            value={supportNetwork}
+          />
+
+          <Text style={styles.describe}>Are you breastfeeding?</Text>
+          <Switch
+            onValueChange={() => toggleSwitch(setBreastfeeding)}
+            value={breastfeeding}
+          />
+
+          <Text style={styles.describe}>Do you have a supportive partner?</Text>
+          <Switch
+            onValueChange={() => toggleSwitch(setPartner)}
+            value={partner}
+          />
 
           <Button
             style={styles.button}
             mode="contained"
-            onPress={() => console.log("submit")}
+            onPress={() =>
+              console.log("submit", supportNetwork, breastfeeding, partner)
+            }
           >
             Create My Profile!
           </Button>
@@ -120,5 +149,5 @@ const styles = StyleSheet.create({
     color: "rgba(96,100,109, 1)",
     marginBottom: 5,
     marginTop: 5,
-  }
+  },
 });
