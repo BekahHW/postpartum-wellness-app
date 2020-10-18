@@ -1,6 +1,4 @@
 import * as React from "react";
-import { useState } from "react";
-
 import {
   Image,
   TouchableOpacity,
@@ -9,21 +7,10 @@ import {
   Text,
   View,
 } from "react-native";
-import { Button } from "react-native-paper";
 import { StackScreenProps } from "@react-navigation/stack";
 import { RootStackParamList } from "../types";
 
-import LoadingAffirmation from "./LoadingAffirmation";
-
-export default function HomeScreen({
-  navigation,
-}: StackScreenProps<RootStackParamList, "NotFound">) {
-  const [loading, isLoading] = useState(false);
-
-  if (loading) {
-    return <LoadingAffirmation />;
-  }
-
+export default function LoadingAffirmation() {
   return (
     <View style={styles.container}>
       <ScrollView
@@ -31,30 +18,14 @@ export default function HomeScreen({
         contentContainerStyle={styles.contentContainer}
       >
         <View style={styles.getStartedContainer}>
-          <Text style={styles.getStartedText}>Postpartum Wellness</Text>
-          <Button
-            style={styles.button}
-            mode="contained"
-            onPress={() => navigation.replace("SignIn")}
-          >
-            Sign-In
-          </Button>
-          <Button
-            style={styles.button}
-            mode="contained"
-            onPress={() => navigation.replace("SignUp")}
-          >
-            Sign-Up
-          </Button>
+          <Text style={styles.getStartedText}>
+            I am a powerhouse; I am indestructible
+          </Text>
         </View>
       </ScrollView>
     </View>
   );
 }
-
-HomeScreen.navigationOptions = {
-  header: null,
-};
 
 const styles = StyleSheet.create({
   container: {
