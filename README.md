@@ -48,6 +48,8 @@ yarn test
 
 Launches the test runner in the interactive watch mode.
 
+- If you're working on a UI element, (Expo's Sandbox)[https://snack.expo.io/] is a great place to test it out without having to run the app.
+
 # Code of Conduct
 
 This is an inclusive space for education, learning and healthy communication. We ask that before you engage with the repository, please check out the [Code of Conduct](https://github.com/tkshill/Quarto/blob/main/CODE_OF_CONDUCT.md). This repo will serve as a learning experience not only in functional programming and UI design, but also in good community interactions. As much as possible, all contributors should feel safe, respected, and appreciated for their efforts.
