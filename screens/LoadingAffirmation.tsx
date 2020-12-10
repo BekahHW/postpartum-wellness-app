@@ -21,33 +21,28 @@ const affirmationData = [
   let affirmation = affirmationData[Math.floor(Math.random() * affirmationData.length)];
 
   return (
-    // <View style={styles.container}>
-    //   <ScrollView
-    //     style={styles.container}
-    //     contentContainerStyle={styles.contentContainer}
-    //   >
+ 
         <View style={styles.getStartedContainer}>
           <Text style={styles.getStartedText}>
             {affirmation}
           </Text>
         </View>
-    //   </ScrollView>
-    // </View>
+ 
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#000",
-  },
-  contentContainer: {
-    flex: 1,
-    paddingTop: 30,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#fff",
-  },
+  // container: {
+  //   flex: 1,
+  //   backgroundColor: "#000",
+  // },
+  // contentContainer: {
+  //   flex: 1,
+  //   paddingTop: 30,
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  //   backgroundColor: "#fff",
+  // },
   getStartedContainer: {
     alignItems: "center",
     justifyContent: "center",
