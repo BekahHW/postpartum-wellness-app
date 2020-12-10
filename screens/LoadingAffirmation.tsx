@@ -10,20 +10,29 @@ import {
 import { StackScreenProps } from "@react-navigation/stack";
 import { RootStackParamList } from "../types";
 
+
+
 export default function LoadingAffirmation() {
+
+const affirmationData = [
+  "I am a powerhouse; I am indestructible", "I am capable of amazing things if I believe it to be true and act on those feelings.", "I am strong and courageous.", "I am hopeful.", "Asking for help is a strength.", "I matter.", "Taking care of myself makes me a better mom. I give myself permission to do something to nurture me.", "I am powerful.", "Vulnerability is a strength.", "I love myself.", "I am growing.", "I will lean on others when I am tired.", "It's normal to be tired.", "One bad day does not make me a bad mom. One bad day makes me human.", "I am strong and brave, even when I feel weak.", "Sharing my fears and anxieties is a strength."
+]
+
+  let affirmation = affirmationData[Math.floor(Math.random() * affirmationData.length)];
+
   return (
-    <View style={styles.container}>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}
-      >
+    // <View style={styles.container}>
+    //   <ScrollView
+    //     style={styles.container}
+    //     contentContainerStyle={styles.contentContainer}
+    //   >
         <View style={styles.getStartedContainer}>
           <Text style={styles.getStartedText}>
-            I am a powerhouse; I am indestructible
+            {affirmation}
           </Text>
         </View>
-      </ScrollView>
-    </View>
+    //   </ScrollView>
+    // </View>
   );
 }
 

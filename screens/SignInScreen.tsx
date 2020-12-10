@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
+
 export default function SignInScreen() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -49,6 +50,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#fff",
+  },
+   pink: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "pink",
   },
   getStartedContainer: {
     alignItems: "center",
