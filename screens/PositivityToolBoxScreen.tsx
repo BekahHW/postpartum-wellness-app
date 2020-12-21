@@ -15,10 +15,65 @@ export default function PositivityToolBox() {
           <Text style={styles.getStartedText}>Positivity Toolbox</Text>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log("title of that card") }
+            onPress={() => console.log("affirmation") }
           >
-            <Card style={styles.card}>
+            <Card style={styles.purpleCard}>
               <Card.Title title="Affirmation"></Card.Title>
+              <Card.Content>
+                <Paragraph>Some text here.</Paragraph>
+              </Card.Content>
+            </Card>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.touchable}
+            onPress={() => console.log("mindfulness") }
+          >
+            <Card style={styles.pinkCard}>
+              <Card.Title title="Mindfulness"></Card.Title>
+              <Card.Content>
+                <Paragraph>Some text here.</Paragraph>
+              </Card.Content>
+            </Card>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.touchable}
+            onPress={() => console.log("breathing") }
+          >
+            <Card style={styles.orangeCard}>
+              <Card.Title title="Breathing"></Card.Title>
+              <Card.Content>
+                <Paragraph>Some text here.</Paragraph>
+              </Card.Content>
+            </Card>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.touchable}
+            onPress={() => console.log("laughing") }
+          >
+            <Card style={styles.purpleCard}>
+              <Card.Title title="Laughing"></Card.Title>
+              <Card.Content>
+                <Paragraph>Some text here.</Paragraph>
+              </Card.Content>
+            </Card>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.touchable}
+            onPress={() => console.log("visualization") }
+          >
+            <Card style={styles.pinkCard}>
+              <Card.Title title="Visualization"></Card.Title>
+              <Card.Content>
+                <Paragraph>Some text here.</Paragraph>
+              </Card.Content>
+            </Card>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.touchable}
+            onPress={() => console.log("moving") }
+          >
+            <Card style={styles.orangeCard}>
+              <Card.Title title="Moving"></Card.Title>
               <Card.Content>
                 <Paragraph>Some text here.</Paragraph>
               </Card.Content>
@@ -52,9 +107,15 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   touchable: {
-
+    paddingTop: 30,
   },
-  card: {
-
+  purpleCard: {
+    backgroundColor: CardColors.purple,
+  },
+  pinkCard: {
+    backgroundColor: CardColors.pink,
+  },
+  orangeCard: {
+    backgroundColor: CardColors.orange,
   },
 });
