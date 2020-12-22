@@ -10,7 +10,7 @@ import useColorScheme from "../hooks/useColorScheme";
 import {
   BottomTabParamList,
   HomeParamList,
-  ResourcesParamList,
+  PositivityToolBoxParamList,
   ProfileParamList,
 } from "../types";
 import HomeScreen from "../screens/HomeScreen";
@@ -98,7 +98,7 @@ function TabOneNavigator() {
   );
 }
 
-const TabTwoStack = createStackNavigator<ResourcesParamList>();
+const TabTwoStack = createStackNavigator<PositivityToolBoxParamList>();
 
 function TabTwoNavigator() {
   return (

@@ -7,7 +7,7 @@ export type RootStackParamList = {
 
 export type BottomTabParamList = {
   Home: undefined;
-  Resources: undefined;
+  PositivityToolBox: undefined;
   Profile: undefined;
 };
 
@@ -15,8 +15,12 @@ export type HomeParamList = {
   HomeScreen: undefined;
 };
 
-export type ResourcesParamList = {
+/* export type ResourcesParamList = {
   ResourcesScreen: undefined;
+}; */
+
+export type PositivityToolBoxParamList = {
+  PositivityToolBoxScreen: undefined;
 };
 
 export type ProfileParamList = {
