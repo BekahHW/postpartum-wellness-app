@@ -34,6 +34,11 @@ export default function PositivityToolBox() {
           >
             <Card style={styles.pinkCard}>
               <View style={styles.cardContainer}>
+                <Card.Cover 
+                  style={styles.cardCover}
+                  source={{ uri: require("../assets/images/meditating.png") }}
+                  resizeMode="contain"
+                />
                 <Card.Title title="Mindfulness" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
               </View>
             </Card>
@@ -43,7 +48,9 @@ export default function PositivityToolBox() {
             onPress={() => console.log("breathing") }
           >
             <Card style={styles.orangeCard}>
-              <Card.Title title="Breathing" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+              <View style={styles.cardContainer}>
+                <Card.Title title="Breathing" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+              </View>
             </Card>
           </TouchableOpacity>
           <TouchableOpacity
@@ -51,7 +58,14 @@ export default function PositivityToolBox() {
             onPress={() => console.log("laughing") }
           >
             <Card style={styles.greenCard}>
-              <Card.Title title="Laughing" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+              <View style={styles.cardContainer}>
+                <Card.Cover 
+                  style={styles.cardCover}
+                  source={{ uri: require("../assets/images/feeling_happy.png") }}
+                  resizeMode="contain"
+                />
+                <Card.Title title="Laughing" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+              </View>
             </Card>
           </TouchableOpacity>
           <TouchableOpacity
@@ -59,7 +73,14 @@ export default function PositivityToolBox() {
             onPress={() => console.log("visualization") }
           >
             <Card style={styles.yellowCard}>
-              <Card.Title title="Visualization" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+              <View style={styles.cardContainer}>
+                <Card.Cover 
+                  style={styles.cardCover}
+                  source={{ uri: require("../assets/images/flowers.png") }}
+                  resizeMode="contain"
+                />
+                <Card.Title title="Visualization" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+              </View>
             </Card>
           </TouchableOpacity>
           <TouchableOpacity
@@ -67,7 +88,14 @@ export default function PositivityToolBox() {
             onPress={() => console.log("moving") }
           >
             <Card style={styles.blueCard}>
-              <Card.Title title="Moving" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+              <View style={styles.cardContainer}>
+                <Card.Cover 
+                  style={styles.cardCover}
+                  source={{ uri: require("../assets/images/nature_benefits.png") }}
+                  resizeMode="contain"
+                />
+                <Card.Title title="Moving" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+              </View>
             </Card>
           </TouchableOpacity>
         </View>
