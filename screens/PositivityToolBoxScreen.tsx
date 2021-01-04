@@ -21,7 +21,7 @@ export default function PositivityToolBox() {
               <View style={styles.cardContainer}>
                 <Card.Cover 
                   style={styles.cardCover}
-                  source={{ uri: require("../assets/images/loving_it.png") }}
+                  source={require("../assets/images/loving_it.png")}
                   resizeMode="contain"
                 />
                 <Card.Title title="Affirmation" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
@@ -36,7 +36,7 @@ export default function PositivityToolBox() {
               <View style={styles.cardContainer}>
                 <Card.Cover 
                   style={styles.cardCover}
-                  source={{ uri: require("../assets/images/meditating.png") }}
+                  source={require("../assets/images/meditating.png")}
                   resizeMode="contain"
                 />
                 <Card.Title title="Mindfulness" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
@@ -61,7 +61,7 @@ export default function PositivityToolBox() {
               <View style={styles.cardContainer}>
                 <Card.Cover 
                   style={styles.cardCover}
-                  source={{ uri: require("../assets/images/feeling_happy.png") }}
+                  source={require("../assets/images/feeling_happy.png")}
                   resizeMode="contain"
                 />
                 <Card.Title title="Laughing" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
@@ -76,7 +76,7 @@ export default function PositivityToolBox() {
               <View style={styles.cardContainer}>
                 <Card.Cover 
                   style={styles.cardCover}
-                  source={{ uri: require("../assets/images/flowers.png") }}
+                  source={require("../assets/images/flowers.png")}
                   resizeMode="contain"
                 />
                 <Card.Title title="Visualization" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
@@ -91,7 +91,7 @@ export default function PositivityToolBox() {
               <View style={styles.cardContainer}>
                 <Card.Cover 
                   style={styles.cardCover}
-                  source={{ uri: require("../assets/images/nature_benefits.png") }}
+                  source={require("../assets/images/nature_benefits.png")}
                   resizeMode="contain"
                 />
                 <Card.Title title="Moving" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
@@ -148,20 +148,32 @@ const styles = StyleSheet.create({
   },
   purpleCard: {
     backgroundColor: CardColors.purple,
+    width: "100%", // Required to make it work on Android
+    height: 100, //Required to make it work on Android
   },
   pinkCard: {
     backgroundColor: CardColors.pink,
+    width: "100%",
+    height: 100,
   },
   orangeCard: {
     backgroundColor: CardColors.orange,
+    width: "100%",
+    height: 100,
   },
   greenCard: {
     backgroundColor: CardColors.green,
+    width: "100%",
+    height: 100,
   },
   yellowCard: {
     backgroundColor: CardColors.yellow,
+    width: "100%",
+    height: 100,
   },
   blueCard: {
     backgroundColor: CardColors.blue,
+    width: "100%",
+    height: 100,
   }
 });
