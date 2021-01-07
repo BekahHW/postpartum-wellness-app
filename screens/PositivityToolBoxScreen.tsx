@@ -3,6 +3,7 @@ import { Button, Card, Title, Paragraph } from 'react-native-paper';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Switch } from 'react-native';
 import Colors from "../constants/Colors";
 import CardColors from "../constants/CardColors";
+import BreathingSvg from "../components/BreathingSvg";
 
 export default function PositivityToolBox() {
   return (
@@ -49,6 +50,9 @@ export default function PositivityToolBox() {
           >
             <Card style={styles.orangeCard}>
               <View style={styles.cardContainer}>
+                <Card.Content style={styles.cardContent}>
+                  <BreathingSvg />
+                </Card.Content>
                 <Card.Title title="Breathing" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
               </View>
             </Card>
@@ -136,15 +140,22 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
   },
   cardTitle: {
-    width: "70%",
+    width: "60%",
     height: 100,
     padding: 10,
   },
   cardCover: {
     backgroundColor: "transparent",
-    width: "25%",
+    width: "35%",
     height: 100,
     padding: 10,
+  },
+  cardContent: {
+    backgroundColor: "transparent",
+    width: "35%",
+    height: 100,
+    padding: 10,
+    alignItems: "center",
   },
   purpleCard: {
     backgroundColor: CardColors.purple,
