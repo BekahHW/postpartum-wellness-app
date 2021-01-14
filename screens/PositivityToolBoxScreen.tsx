@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Button, Card, Title, Paragraph } from 'react-native-paper';
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Switch } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Switch, SafeAreaView } from 'react-native';
 import Colors from "../constants/Colors";
 import CardColors from "../constants/CardColors";
 import BreathingSvg from "../components/BreathingSvg";
+import Constants from "expo-constants";
 
 export default function PositivityToolBox() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}
@@ -104,7 +105,7 @@ export default function PositivityToolBox() {
           </TouchableOpacity>
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   )
 };
 
@@ -112,11 +113,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.light.background,
+    marginTop: Constants.statusBarHeight,
   },
   contentContainer: {
     flex: 1,
     paddingTop: 30,
     backgroundColor: Colors.light.background,
+    marginHorizontal: 20,
   },
   getStartedContainer: {
     justifyContent: "center",
