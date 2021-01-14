@@ -10,7 +10,7 @@ export default function PositivityToolBox() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView
-        style={styles.container}
+        style={styles.scrollView}
         contentContainerStyle={styles.contentContainer}
       >
         <View style={styles.getStartedContainer}>
@@ -115,11 +115,12 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.light.background,
     marginTop: Constants.statusBarHeight,
   },
+  scrollView: {
+    marginHorizontal: 20,
+  },
   contentContainer: {
-    flex: 1,
     paddingTop: 30,
     backgroundColor: Colors.light.background,
-    marginHorizontal: 20,
   },
   getStartedContainer: {
     justifyContent: "center",
