@@ -3,7 +3,12 @@ import { Button, Card, Title, Paragraph } from 'react-native-paper';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Switch, SafeAreaView } from 'react-native';
 import Colors from "../constants/Colors";
 import CardColors from "../constants/CardColors";
-import BreathingSvg from "../components/BreathingSvg";
+import BreathingSvg from "../assets/undraw_svgs/BreathingSvg";
+import LovingItSvg from "../assets/undraw_svgs/LovingItSvg";
+import MeditatingSvg from "../assets/undraw_svgs/MeditatingSvg";
+import FeelingHappySvg from "../assets/undraw_svgs/FeelingHappySvg";
+import FlowersSvg from "../assets/undraw_svgs/FlowersSvg";
+import NatureBenefitsSvg from "../assets/undraw_svgs/NatureBenefits";
 import Constants from "expo-constants";
 
 export default function PositivityToolBox() {
@@ -21,11 +26,9 @@ export default function PositivityToolBox() {
           >
             <Card style={styles.purpleCard}>
               <View style={styles.cardContainer}>
-                <Card.Cover 
-                  style={styles.cardCover}
-                  source={require("../assets/images/loving_it.png")}
-                  resizeMode="contain"
-                />
+                <Card.Content style={styles.cardContent}>
+                  <LovingItSvg />
+                </Card.Content>
                 <Card.Title title="Affirmation" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
               </View>
             </Card>
@@ -36,11 +39,9 @@ export default function PositivityToolBox() {
           >
             <Card style={styles.pinkCard}>
               <View style={styles.cardContainer}>
-                <Card.Cover 
-                  style={styles.cardCover}
-                  source={require("../assets/images/meditating.png")}
-                  resizeMode="contain"
-                />
+              <Card.Content style={styles.cardContent}>
+                  <MeditatingSvg />
+                </Card.Content>
                 <Card.Title title="Mindfulness" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
               </View>
             </Card>
@@ -64,11 +65,9 @@ export default function PositivityToolBox() {
           >
             <Card style={styles.greenCard}>
               <View style={styles.cardContainer}>
-                <Card.Cover 
-                  style={styles.cardCover}
-                  source={require("../assets/images/feeling_happy.png")}
-                  resizeMode="contain"
-                />
+                <Card.Content style={styles.cardContent}>
+                  <FeelingHappySvg />
+                </Card.Content>
                 <Card.Title title="Laughing" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
               </View>
             </Card>
@@ -79,11 +78,9 @@ export default function PositivityToolBox() {
           >
             <Card style={styles.yellowCard}>
               <View style={styles.cardContainer}>
-                <Card.Cover 
-                  style={styles.cardCover}
-                  source={require("../assets/images/flowers.png")}
-                  resizeMode="contain"
-                />
+                <Card.Content style={styles.cardContent}>
+                  <FlowersSvg />
+                </Card.Content>
                 <Card.Title title="Visualization" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
               </View>
             </Card>
@@ -94,11 +91,9 @@ export default function PositivityToolBox() {
           >
             <Card style={styles.blueCard}>
               <View style={styles.cardContainer}>
-                <Card.Cover 
-                  style={styles.cardCover}
-                  source={require("../assets/images/nature_benefits.png")}
-                  resizeMode="contain"
-                />
+                <Card.Content style={styles.cardContent}>
+                  <NatureBenefitsSvg />
+                </Card.Content>
                 <Card.Title title="Moving" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
               </View>
             </Card>
@@ -112,6 +107,8 @@ export default function PositivityToolBox() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 15,
+    paddingBottom: 15,
     backgroundColor: Colors.light.background,
     marginTop: Constants.statusBarHeight,
   },
@@ -119,7 +116,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   contentContainer: {
-    paddingTop: 30,
+    paddingTop: 15,
+    paddingBottom: 15,
     backgroundColor: Colors.light.background,
   },
   getStartedContainer: {
@@ -148,17 +146,12 @@ const styles = StyleSheet.create({
     height: 100,
     padding: 10,
   },
-  cardCover: {
-    backgroundColor: "transparent",
-    width: "35%",
-    height: 100,
-    padding: 10,
-  },
   cardContent: {
     backgroundColor: "transparent",
-    width: "35%",
+    width: "39%",
     height: 100,
     padding: 10,
+    justifyContent: "center",
     alignItems: "center",
   },
   purpleCard: {
