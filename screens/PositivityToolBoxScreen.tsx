@@ -39,7 +39,7 @@ export default function PositivityToolBox() {
           >
             <Card style={styles.pinkCard}>
               <View style={styles.cardContainer}>
-              <Card.Content style={styles.cardContent}>
+                <Card.Content style={styles.cardContent}>
                   <MeditatingSvg />
                 </Card.Content>
                 <Card.Title title="Mindfulness" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
@@ -158,30 +158,42 @@ const styles = StyleSheet.create({
     backgroundColor: CardColors.purple,
     width: "100%", // Required to make it work on Android
     height: 100, //Required to make it work on Android
+    paddingLeft: 15,
+    paddingRight: 15,
   },
   pinkCard: {
     backgroundColor: CardColors.pink,
     width: "100%",
     height: 100,
+    paddingLeft: 15,
+    paddingRight: 15,
   },
   orangeCard: {
     backgroundColor: CardColors.orange,
     width: "100%",
     height: 100,
+    paddingLeft: 15,
+    paddingRight: 15,
   },
   greenCard: {
     backgroundColor: CardColors.green,
     width: "100%",
     height: 100,
+    paddingLeft: 15,
+    paddingRight: 15,
   },
   yellowCard: {
     backgroundColor: CardColors.yellow,
     width: "100%",
     height: 100,
+    paddingLeft: 15,
+    paddingRight: 15,
   },
   blueCard: {
     backgroundColor: CardColors.blue,
     width: "100%",
     height: 100,
+    paddingLeft: 15,
+    paddingRight: 15,
   }
 });
