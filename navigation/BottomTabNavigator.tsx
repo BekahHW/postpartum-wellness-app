@@ -10,12 +10,13 @@ import useColorScheme from "../hooks/useColorScheme";
 import {
   BottomTabParamList,
   HomeParamList,
-  ResourcesParamList,
+  PositivityToolBoxParamList,
   ProfileParamList,
 } from "../types";
 import HomeScreen from "../screens/HomeScreen";
 import ResourcesScreen from "../screens/ResourcesScreen";
 import ProfileScreen from "../screens/CreateProfileScreen";
+import PositivityToolBoxScreen from "../screens/PositivityToolBoxScreen";
 
 const config = Platform.select({
   web: { headerMode: "screen" },
@@ -48,7 +49,7 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="Resources"
+        name="PositivityToolBox"
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => (
@@ -97,15 +98,15 @@ function TabOneNavigator() {
   );
 }
 
-const TabTwoStack = createStackNavigator<ResourcesParamList>();
+const TabTwoStack = createStackNavigator<PositivityToolBoxParamList>();
 
 function TabTwoNavigator() {
   return (
     <TabTwoStack.Navigator>
       <TabTwoStack.Screen
-        name="ResourcesScreen"
-        component={ResourcesScreen}
-        options={{ headerTitle: "Resources" }}
+        name="PositivityToolBoxScreen"
+        component={PositivityToolBoxScreen}
+        options={{ headerTitle: "PositivityToolBox" }}
       />
     </TabTwoStack.Navigator>
   );
