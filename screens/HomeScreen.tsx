@@ -17,7 +17,7 @@ import LoadingAffirmation from "./LoadingAffirmation";
 
 export default function HomeScreen({
   navigation,
-}: StackScreenProps<RootStackParamList, "NotFound">) {
+}: StackScreenProps<RootStackParamList, "Root">) {
   const [loading, isLoading] = useState(false);
 
   if (loading) {
