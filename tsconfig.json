@@ -14,5 +14,12 @@
     "babel.config.js",
     "metro.config.js",
     "jest.config.js"
-  ]
-}
+  ],
+  "target": "esnext",
+       "baseUrl": ".",
+       "paths": {
+         "*": ["src/*"],
+         "tests": ["tests/*"],
+         "@components/*": ["src/components/*"],
+       },
+      }
