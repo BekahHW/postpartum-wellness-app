@@ -20,11 +20,12 @@ If any of that sounds interesting, don't hesitate to take a look at one of our [
 # Run and Install
 
 1. If you don't have it already, download and install [NODE.js](https://nodejs.org/en/download/)
-2. Download and install [Expo-CLI](https://expo.io/tools#cli) via
+2. Install [Yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable) if you don't have it.
+3. Download and install [Expo-CLI](https://expo.io/tools#cli) via
    `yarn global add expo-cli`
-3. [Fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) this repo
-4. Create a local copy on your machine
-5. In a shell terminal/command line run:
+4. [Fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) this repo
+5. Create a local copy on your machine
+6. In a shell terminal/command line run:
 
 ```
 yarn
