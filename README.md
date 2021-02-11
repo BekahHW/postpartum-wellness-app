@@ -27,7 +27,7 @@ If any of that sounds interesting, don't hesitate to take a look at one of our [
 5. In a shell terminal/command line run:
 
 ```
-yarn 
+yarn
 ```
 
 6. Run the live development server with:
@@ -37,7 +37,7 @@ yarn start
 ```
 
 From here, the app can be run a couple of different ways. If you have XCode, you can run the app on your computer. (With X-Code, instead of `yarn start` you can run `yarn ios` or `yarn android`.) If you don't have XCode that's fine! You'll see a QR code popup, you can access the app on your phone through the QR code. You will need the expo app.
-A more in-depth guide for contributing can be found in the [CONTRIBUTING](https://github.com/BekahHW/postpartum-wellness-app/blob/main/CONTRIBUTING.md)
+A more in-depth guide for contributing can be found in the [CONTRIBUTING](https://github.com/BekahHW/postpartum-wellness-app/blob/master/CONTRIBUTING.md)
 
 The page will reload if you make edits and save.
 You will also see any lint errors in the console.
