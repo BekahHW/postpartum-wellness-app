@@ -49,7 +49,7 @@ yarn test
 
 Launches the test runner in the interactive watch mode.
 
-- If you're working on a UI element, (Expo's Sandbox)[https://snack.expo.io/] is a great place to test it out without having to run the app.
+- If you're working on a UI element, [Expo's Sandbox](https://snack.expo.io/) is a great place to test it out without having to run the app.
 
 # Code of Conduct
 
