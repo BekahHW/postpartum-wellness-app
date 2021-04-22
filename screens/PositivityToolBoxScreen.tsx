@@ -1,6 +1,14 @@
 import React, { useState } from "react";
-import { Button, Card, Title, Paragraph } from 'react-native-paper';
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Switch, SafeAreaView } from 'react-native';
+import { Button, Card, Title, Paragraph } from "react-native-paper";
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  TouchableOpacity,
+  Switch,
+  SafeAreaView,
+} from "react-native";
 import Colors from "../constants/Colors";
 import CardColors from "../constants/CardColors";
 import BreathingSvg from "../assets/undraw_svgs/BreathingSvg";
@@ -22,87 +30,111 @@ export default function PositivityToolBox() {
           <Text style={styles.getStartedText}>Positivity Toolbox</Text>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log("affirmation") }
+            onPress={() => console.log("affirmation")}
           >
             <Card style={styles.purpleCard}>
               <View style={styles.cardContainer}>
                 <Card.Content style={styles.cardContent}>
                   <LovingItSvg />
                 </Card.Content>
-                <Card.Title title="Affirmation" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+                <Card.Title
+                  title="Affirmation"
+                  subtitle="Some text here"
+                  style={styles.cardTitle}
+                ></Card.Title>
               </View>
             </Card>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log("mindfulness") }
+            onPress={() => console.log("mindfulness")}
           >
             <Card style={styles.pinkCard}>
               <View style={styles.cardContainer}>
                 <Card.Content style={styles.cardContent}>
                   <MeditatingSvg />
                 </Card.Content>
-                <Card.Title title="Mindfulness" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+                <Card.Title
+                  title="Mindfulness"
+                  subtitle="Some text here"
+                  style={styles.cardTitle}
+                ></Card.Title>
               </View>
             </Card>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log("breathing") }
+            onPress={() => console.log("breathing")}
           >
             <Card style={styles.orangeCard}>
               <View style={styles.cardContainer}>
                 <Card.Content style={styles.cardContent}>
                   <BreathingSvg />
                 </Card.Content>
-                <Card.Title title="Breathing" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+                <Card.Title
+                  title="Breathing"
+                  subtitle="Some text here"
+                  style={styles.cardTitle}
+                ></Card.Title>
               </View>
             </Card>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log("laughing") }
+            onPress={() => console.log("laughing")}
           >
             <Card style={styles.greenCard}>
               <View style={styles.cardContainer}>
                 <Card.Content style={styles.cardContent}>
                   <FeelingHappySvg />
                 </Card.Content>
-                <Card.Title title="Laughing" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+                <Card.Title
+                  title="Laughing"
+                  subtitle="Some text here"
+                  style={styles.cardTitle}
+                ></Card.Title>
               </View>
             </Card>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log("visualization") }
+            onPress={() => console.log("visualization")}
           >
             <Card style={styles.yellowCard}>
               <View style={styles.cardContainer}>
                 <Card.Content style={styles.cardContent}>
                   <FlowersSvg />
                 </Card.Content>
-                <Card.Title title="Visualization" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+                <Card.Title
+                  title="Visualization"
+                  subtitle="Some text here"
+                  style={styles.cardTitle}
+                ></Card.Title>
               </View>
             </Card>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log("moving") }
+            onPress={() => console.log("moving")}
           >
             <Card style={styles.blueCard}>
               <View style={styles.cardContainer}>
                 <Card.Content style={styles.cardContent}>
                   <NatureBenefitsSvg />
                 </Card.Content>
-                <Card.Title title="Moving" subtitle="Some text here" style={styles.cardTitle}></Card.Title>
+                <Card.Title
+                  title="Moving"
+                  subtitle="Some text here"
+                  style={styles.cardTitle}
+                ></Card.Title>
               </View>
             </Card>
           </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
-  )
-};
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -122,7 +154,7 @@ const styles = StyleSheet.create({
   },
   getStartedContainer: {
     justifyContent: "center",
-    marginHorizontal: 50,
+    marginHorizontal: 30,
   },
   getStartedText: {
     fontSize: 24,
@@ -195,5 +227,5 @@ const styles = StyleSheet.create({
     height: 100,
     paddingLeft: 15,
     paddingRight: 15,
-  }
+  },
 });
