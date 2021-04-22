@@ -18,8 +18,9 @@ import FeelingHappySvg from "../assets/undraw_svgs/FeelingHappySvg";
 import FlowersSvg from "../assets/undraw_svgs/FlowersSvg";
 import NatureBenefitsSvg from "../assets/undraw_svgs/NatureBenefits";
 import Constants from "expo-constants";
+import { AffirmationScreen } from "./AffirmationScreen";
 
-export default function PositivityToolBox() {
+export default function PositivityToolBox({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView
@@ -30,7 +31,7 @@ export default function PositivityToolBox() {
           <Text style={styles.getStartedText}>Positivity Toolbox</Text>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log("affirmation")}
+            onPress={() => navigation.navigate("AffirmationScreen")}
           >
             <Card style={styles.purpleCard}>
               <View style={styles.cardContainer}>

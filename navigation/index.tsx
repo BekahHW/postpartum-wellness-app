@@ -9,11 +9,12 @@ import { ColorSchemeName } from "react-native";
 // import HomeScreen from "../screens/HomeScreen";
 import SignInScreen from "../screens/SignInScreen";
 import SignUpScreen from "../screens/SignUpScreen";
-
+import AffirmationScreen from "../screens/AffirmationScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
 import { RootStackParamList } from "../types";
 import BottomTabNavigator from "./BottomTabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
+import PositivityToolBoxScreen from '../screens/PositivityToolBoxScreen'
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -54,6 +55,16 @@ function RootNavigator() {
         name="SignUp"
         component={SignUpScreen}
         options={{ title: "Sign up" }}
+      />
+        <Stack.Screen
+        name="PositivityToolBox"
+        component={PositivityToolBoxScreen}
+        options={{ title: "Positivity ToolBox" }}
+      />
+      <Stack.Screen
+        name="AffirmationScreen"
+        component={AffirmationScreen}
+        options={{ title: "AffirmationScreen" }}
       />
     </Stack.Navigator>
   );
