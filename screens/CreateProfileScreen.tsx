@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 30,
     backgroundColor: "#fff",
+    paddingBottom: 50,
   },
   getStartedContainer: {
     justifyContent: "center",
