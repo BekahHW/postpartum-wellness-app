@@ -64,7 +64,7 @@ function RootNavigator() {
       <Stack.Screen
         name="AffirmationScreen"
         component={AffirmationScreen}
-        options={{ title: "AffirmationScreen" }}
+        options={{ title: "Affirmation" }}
       />
     </Stack.Navigator>
   );

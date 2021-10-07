@@ -12,7 +12,7 @@ import { RootStackParamList } from "../types";
 
 
 
-export default function LoadingAffirmation() {
+export default function AffirmationScreen() {
 
 const affirmationData = [
   "I am a powerhouse; I am indestructible", "I am capable of amazing things if I believe it to be true and act on those feelings.", "I am strong and courageous.", "I am hopeful.", "Asking for help is a strength.", "I matter.", "Taking care of myself makes me a better mom. I give myself permission to do something to nurture me.", "I am powerful.", "Vulnerability is a strength.", "I love myself.", "I am growing.", "I will lean on others when I am tired.", "It's normal to be tired.", "One bad day does not make me a bad mom. One bad day makes me human.", "I am strong and brave, even when I feel weak.", "Sharing my fears and anxieties is a strength."
@@ -21,21 +21,23 @@ const affirmationData = [
   let affirmation = affirmationData[Math.floor(Math.random() * affirmationData.length)];
 
   return (
- 
+  <View style={styles.container}>
         <View style={styles.getStartedContainer}>
           <Text style={styles.getStartedText}>
             {affirmation}
           </Text>
         </View>
- 
+      </View>
   );
 }
 
 const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  //   backgroundColor: "#000",
-  // },
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#fff",
+  },
   // contentContainer: {
   //   flex: 1,
   //   paddingTop: 30,
