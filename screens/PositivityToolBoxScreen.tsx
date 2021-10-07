@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import {RootStackParamList} from "../types";
+import {StackScreenProps} from "@react-navigation/stack";
 import { Button, Card, Title, Paragraph } from "react-native-paper";
 import {
   StyleSheet,
@@ -18,9 +20,9 @@ import FeelingHappySvg from "../assets/undraw_svgs/FeelingHappySvg";
 import FlowersSvg from "../assets/undraw_svgs/FlowersSvg";
 import NatureBenefitsSvg from "../assets/undraw_svgs/NatureBenefits";
 import Constants from "expo-constants";
-import { AffirmationScreen } from "./AffirmationScreen";
+import AffirmationScreen from "./AffirmationScreen";
 
-export default function PositivityToolBox({navigation}) {
+export default function PositivityToolBox({navigation}:  StackScreenProps<RootStackParamList, "PositivityToolBox">) {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView

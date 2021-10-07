@@ -13,7 +13,7 @@ import { Button } from "react-native-paper";
 import { StackScreenProps } from "@react-navigation/stack";
 import { RootStackParamList } from "../types";
 
-import LoadingAffirmation from "./LoadingAffirmation";
+import AffirmationScreen from "./AffirmationScreen";
 
 export default function HomeScreen({
   navigation,
@@ -21,7 +21,7 @@ export default function HomeScreen({
   const [loading, isLoading] = useState(false);
 
   if (loading) {
-    return <LoadingAffirmation />;
+    return <AffirmationScreen />;
   }
 
   return (

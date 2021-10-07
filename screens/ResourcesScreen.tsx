@@ -67,6 +67,26 @@ export default function ResourcesScreen() {
           >
             Help for Dads during the Postpartum Period
           </Text>
+          <Text
+            style={styles.linkText}
+            onPress={() =>
+              Linking.openURL(
+                "https://postpartum.org/services/dads/tips-help-dads-deal-ppda/"
+              )
+            }
+          >
+            Where Dads Can Go for Help
+          </Text>
+          <Text
+            style={styles.linkText}
+            onPress={() =>
+              Linking.openURL(
+                "http://postpartummen.com/online-forum/"
+              )
+            }
+          >
+            Postpartum Men Forum
+          </Text>
         </View>
       </View>
     </View>
