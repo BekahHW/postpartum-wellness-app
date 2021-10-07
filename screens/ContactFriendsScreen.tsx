@@ -7,8 +7,8 @@ import React, { useState } from "react";
 
 export default function ContactFriendsScreen({}){
 
-  const [contactName, setContactName] = useState("SAMHSA’s National Helpline")
-  const [contactNumber, setContactNumber] = useState("1-800-662-4357")
+  const [contactName, setContactName] = useState("")
+  const [contactNumber, setContactNumber] = useState("")
 
 
   return(
@@ -42,17 +42,20 @@ export default function ContactFriendsScreen({}){
             style={styles.textInput}
             mode="outlined"
             value={contactName}
+            placeholder="SAMHSA’s National Helpline"
             onChangeText={(text) => setContactName(text)}
           />
 
 
           <Text style={styles.describe}>
-            Phone Number of Contact
+            Contact's Phone Number
           </Text>
           <TextInput
             style={styles.textInput}
             mode="outlined"
             value={contactNumber}
+            placeholder="1-800-662-4357"
+            keyboardType='numeric'
             onChangeText={(text) => setContactNumber(text)}
           />
 
@@ -78,7 +81,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     flex: 1,
-    paddingTop: 30,
+    paddingTop: 70,
     backgroundColor: "#fff",
     paddingBottom: 50,
   },
