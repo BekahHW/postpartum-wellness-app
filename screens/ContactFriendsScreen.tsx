@@ -1,9 +1,6 @@
-import { StyleSheet, Text, View, ScrollView, Image} from "react-native";
+import { StyleSheet, Text, View, ScrollView, Image, KeyboardAvoidingView} from "react-native";
 import { Button, TextInput } from "react-native-paper";
-
 import React, { useState } from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
-
 
 
 export default function ContactFriendsScreen({}){
@@ -13,7 +10,10 @@ export default function ContactFriendsScreen({}){
 
 
   return(
-    <SafeAreaView style={styles.container}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={styles.container}
+    >
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}
@@ -71,7 +71,7 @@ export default function ContactFriendsScreen({}){
           </Button>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </KeyboardAvoidingView>
   );
 }
 
