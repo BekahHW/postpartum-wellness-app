@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, ScrollView, Image} from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
 import React, { useState } from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 
 
@@ -12,7 +13,7 @@ export default function ContactFriendsScreen({}){
 
 
   return(
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}
@@ -70,18 +71,18 @@ export default function ContactFriendsScreen({}){
           </Button>
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    paddingTop: 50,
+    paddingBottom: 20,
+    backgroundColor: "#fff"
   },
   contentContainer: {
-    flex: 1,
-    paddingTop: 70,
     backgroundColor: "#fff",
     paddingBottom: 50,
   },
