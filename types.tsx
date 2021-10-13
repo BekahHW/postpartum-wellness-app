@@ -3,6 +3,8 @@ export type RootStackParamList = {
   NotFound: undefined;
   SignIn: undefined;
   SignUp: undefined;
+  PositivityToolBox: undefined;
+  AffirmationScreen: undefined;
 };
 
 export type BottomTabParamList = {
