@@ -8,11 +8,21 @@
     "eject": "expo eject",
     "test": "jest --watchAll"
   },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "jest --findRelatedTests"
+    ]
+  },
   "jest": {
     "preset": "jest-expo",
     "setupFilesAfterEnv": [
       "@testing-library/jest-native/extend-expect"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
     "@expo/vector-icons": "^10.0.0",
@@ -47,7 +57,9 @@
     "@types/jest": "^26.0.14",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
+    "husky": "^7.0.2",
     "jest-expo": "~39.0.0",
+    "lint-staged": "^11.2.3",
     "typescript": "~3.9.5"
   },
   "private": true
