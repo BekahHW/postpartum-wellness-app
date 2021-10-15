@@ -10,7 +10,15 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
       "jest --findRelatedTests"
+    ],
+    "*.json": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write --prose-wrap always"
     ]
   },
   "jest": {
@@ -57,9 +65,16 @@
     "@types/jest": "^26.0.14",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-universe": "^7.0.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.2",
     "jest-expo": "~39.0.0",
     "lint-staged": "^11.2.3",
+    "prettier": "^2.4.1",
     "typescript": "~3.9.5"
   },
   "private": true

@@ -1,24 +1,16 @@
-import * as React from "react";
-import { useState } from "react";
+import { StackScreenProps } from '@react-navigation/stack';
+import * as React from 'react';
+import { useState } from 'react';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Button } from 'react-native-paper';
 
-import {
-  Image,
-  TouchableOpacity,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
-import { Button } from "react-native-paper";
-import { StackScreenProps } from "@react-navigation/stack";
-import { RootStackParamList } from "../types";
-
-import AffirmationScreen from "./AffirmationScreen";
+import { RootStackParamList } from '../types';
+import AffirmationScreen from './AffirmationScreen';
 
 export default function HomeScreen({
   navigation,
-}: StackScreenProps<RootStackParamList, "NotFound">) {
-  const [loading, isLoading] = useState(false);
+}: StackScreenProps<RootStackParamList, 'NotFound'>) {
+  const [loading] = useState(false);
 
   if (loading) {
     return <AffirmationScreen />;
@@ -35,14 +27,14 @@ export default function HomeScreen({
           <Button
             style={styles.button}
             mode="contained"
-            onPress={() => navigation.replace("SignIn")}
+            onPress={() => navigation.replace('SignIn')}
           >
             Sign-In
           </Button>
           <Button
             style={styles.button}
             mode="contained"
-            onPress={() => navigation.replace("SignUp")}
+            onPress={() => navigation.replace('SignUp')}
           >
             Sign-Up
           </Button>
@@ -59,25 +51,25 @@ HomeScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#000",
+    backgroundColor: '#000',
   },
   contentContainer: {
     flex: 1,
     paddingTop: 30,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#fff",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
   },
   getStartedContainer: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     marginHorizontal: 50,
   },
   getStartedText: {
     fontSize: 24,
-    color: "rgba(96,100,109, 1)",
+    color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
-    textAlign: "center",
+    textAlign: 'center',
     marginBottom: 16,
   },
   button: {
