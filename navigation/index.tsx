@@ -2,21 +2,21 @@ import {
   NavigationContainer,
   DefaultTheme,
   DarkTheme,
-} from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import * as React from "react";
-import { ColorSchemeName } from "react-native";
+} from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import * as React from 'react';
+import { ColorSchemeName } from 'react-native';
 // import HomeScreen from "../screens/HomeScreen";
-import SignInScreen from "../screens/SignInScreen";
-import SignUpScreen from "../screens/SignUpScreen";
+import SignInScreen from '../screens/SignInScreen';
+import SignUpScreen from '../screens/SignUpScreen';
 // import AffirmationScreen from "../screens/AffirmationScreen";
-import NotFoundScreen from "../screens/NotFoundScreen";
-import { RootStackParamList } from "../types";
-import BottomTabNavigator from "./BottomTabNavigator";
-import LinkingConfiguration from "./LinkingConfiguration";
-import PositivityToolBoxScreen from '../screens/PositivityToolBoxScreen'
-import ContactFriendsScreen from '../screens/ContactFriendsScreen'
-
+import NotFoundScreen from '../screens/NotFoundScreen';
+import { RootStackParamList } from '../types';
+import BottomTabNavigator from './BottomTabNavigator';
+import LinkingConfiguration from './LinkingConfiguration';
+import PositivityToolBoxScreen from '../screens/PositivityToolBoxScreen';
+import ContactFriendsScreen from '../screens/ContactFriendsScreen';
+import AffirmationScreen from '../screens/AffirmationScreen';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -28,7 +28,7 @@ export default function Navigation({
   return (
     <NavigationContainer
       linking={LinkingConfiguration}
-      theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
+      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
     >
       <RootNavigator />
     </NavigationContainer>
@@ -46,27 +46,27 @@ function RootNavigator() {
       <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
-        options={{ title: "Oops!" }}
+        options={{ title: 'Oops!' }}
       />
       <Stack.Screen
         name="SignIn"
         component={SignInScreen}
-        options={{ title: "Sign in" }}
+        options={{ title: 'Sign in' }}
       />
       <Stack.Screen
         name="SignUp"
         component={SignUpScreen}
-        options={{ title: "Sign up" }}
+        options={{ title: 'Sign up' }}
       />
-        <Stack.Screen
+      <Stack.Screen
         name="PositivityToolBox"
         component={PositivityToolBoxScreen}
-        options={{ title: "Positivity ToolBox" }}
+        options={{ title: 'Positivity ToolBox' }}
       />
-        <Stack.Screen
+      <Stack.Screen
         name="AffirmationScreen"
         component={AffirmationScreen}
-        options={{ title: "Affirmation" }}
+        options={{ title: 'Affirmation' }}
       />
     </Stack.Navigator>
   );

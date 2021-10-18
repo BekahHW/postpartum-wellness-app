@@ -1,25 +1,25 @@
-import { Ionicons } from "@expo/vector-icons";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
-import * as React from "react";
-import { Platform } from "react-native";
+import { Ionicons } from '@expo/vector-icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+import * as React from 'react';
+import { Platform } from 'react-native';
 
-import Colors from "../constants/Colors";
-import useColorScheme from "../hooks/useColorScheme";
+import Colors from '../constants/Colors';
+import useColorScheme from '../hooks/useColorScheme';
 
 import {
   BottomTabParamList,
   HomeParamList,
   PositivityToolBoxParamList,
   ProfileParamList,
-} from "../types";
-import HomeScreen from "../screens/HomeScreen";
-import ResourcesScreen from "../screens/ResourcesScreen";
-import ProfileScreen from "../screens/CreateProfileScreen";
-import PositivityToolBoxScreen from "../screens/PositivityToolBoxScreen";
+} from '../types';
+import HomeScreen from '../screens/HomeScreen';
+import ResourcesScreen from '../screens/ResourcesScreen';
+import ProfileScreen from '../screens/CreateProfileScreen';
+import PositivityToolBoxScreen from '../screens/PositivityToolBoxScreen';
 
 const config = Platform.select({
-  web: { headerMode: "screen" },
+  web: { headerMode: 'screen' },
   default: {},
 });
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
@@ -39,9 +39,9 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name={
-                Platform.OS === "ios"
-                  ? `ios-information-circle${focused ? "" : "-outline"}`
-                  : "md-information-circle"
+                Platform.OS === 'ios'
+                  ? `ios-information-circle${focused ? '' : '-outline'}`
+                  : 'md-information-circle'
               }
               color={color}
             />
@@ -54,7 +54,7 @@ export default function BottomTabNavigator() {
         options={{
           tabBarIcon: ({ color }) => (
             <TabBarIcon
-              name={Platform.OS === "ios" ? "ios-link" : "md-link"}
+              name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
               color={color}
             />
           ),
@@ -66,7 +66,7 @@ export default function BottomTabNavigator() {
         options={{
           tabBarIcon: ({ color }) => (
             <TabBarIcon
-              name={Platform.OS === "ios" ? "ios-options" : "md-options"}
+              name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
               color={color}
             />
           ),
@@ -92,7 +92,7 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="HomeScreen"
         component={HomeScreen}
-        options={{ headerTitle: "Home" }}
+        options={{ headerTitle: 'Home' }}
       />
     </TabOneStack.Navigator>
   );
@@ -106,7 +106,7 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="PositivityToolBoxScreen"
         component={PositivityToolBoxScreen}
-        options={{ headerTitle: "PositivityToolBox" }}
+        options={{ headerTitle: 'PositivityToolBox' }}
       />
     </TabTwoStack.Navigator>
   );
@@ -119,7 +119,7 @@ function TabThreeNavigator() {
       <TabThreeStack.Screen
         name="ProfileScreen"
         component={ProfileScreen}
-        options={{ headerTitle: "Profile" }}
+        options={{ headerTitle: 'Profile' }}
       />
     </TabThreeStack.Navigator>
   );
