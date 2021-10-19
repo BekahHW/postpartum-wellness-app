@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import {RootStackParamList} from "../types";
-import {StackScreenProps} from "@react-navigation/stack";
-import { Button, Card, Title, Paragraph } from "react-native-paper";
+import React, { useState } from 'react';
+import { RootStackParamList } from '../types';
+import { StackScreenProps } from '@react-navigation/stack';
+import { Button, Card, Title, Paragraph } from 'react-native-paper';
 import {
   StyleSheet,
   Text,
@@ -10,19 +10,21 @@ import {
   TouchableOpacity,
   Switch,
   SafeAreaView,
-} from "react-native";
-import Colors from "../constants/Colors";
-import CardColors from "../constants/CardColors";
-import BreathingSvg from "../assets/undraw_svgs/BreathingSvg";
-import LovingItSvg from "../assets/undraw_svgs/LovingItSvg";
-import MeditatingSvg from "../assets/undraw_svgs/MeditatingSvg";
-import FeelingHappySvg from "../assets/undraw_svgs/FeelingHappySvg";
-import FlowersSvg from "../assets/undraw_svgs/FlowersSvg";
-import NatureBenefitsSvg from "../assets/undraw_svgs/NatureBenefits";
-import Constants from "expo-constants";
-import AffirmationScreen from "./AffirmationScreen";
+} from 'react-native';
+import Colors from '../constants/Colors';
+import CardColors from '../constants/CardColors';
+import BreathingSvg from '../assets/undraw_svgs/BreathingSvg';
+import LovingItSvg from '../assets/undraw_svgs/LovingItSvg';
+import MeditatingSvg from '../assets/undraw_svgs/MeditatingSvg';
+import FeelingHappySvg from '../assets/undraw_svgs/FeelingHappySvg';
+import FlowersSvg from '../assets/undraw_svgs/FlowersSvg';
+import NatureBenefitsSvg from '../assets/undraw_svgs/NatureBenefits';
+import Constants from 'expo-constants';
+import AffirmationScreen from './AffirmationScreen';
 
-export default function PositivityToolBox({navigation}:  StackScreenProps<RootStackParamList, "PositivityToolBox">) {
+export default function PositivityToolBox({
+  navigation,
+}: StackScreenProps<RootStackParamList, 'PositivityToolBox'>) {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView
@@ -33,7 +35,7 @@ export default function PositivityToolBox({navigation}:  StackScreenProps<RootSt
           <Text style={styles.getStartedText}>Positivity Toolbox</Text>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => navigation.navigate("AffirmationScreen")}
+            onPress={() => navigation.navigate('Affirmation')}
           >
             <Card style={styles.purpleCard}>
               <View style={styles.cardContainer}>
@@ -50,7 +52,7 @@ export default function PositivityToolBox({navigation}:  StackScreenProps<RootSt
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log("mindfulness")}
+            onPress={() => console.log('mindfulness')}
           >
             <Card style={styles.pinkCard}>
               <View style={styles.cardContainer}>
@@ -67,7 +69,7 @@ export default function PositivityToolBox({navigation}:  StackScreenProps<RootSt
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log("breathing")}
+            onPress={() => console.log('breathing')}
           >
             <Card style={styles.orangeCard}>
               <View style={styles.cardContainer}>
@@ -84,7 +86,7 @@ export default function PositivityToolBox({navigation}:  StackScreenProps<RootSt
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log("laughing")}
+            onPress={() => console.log('laughing')}
           >
             <Card style={styles.greenCard}>
               <View style={styles.cardContainer}>
@@ -101,7 +103,7 @@ export default function PositivityToolBox({navigation}:  StackScreenProps<RootSt
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log("visualization")}
+            onPress={() => console.log('visualization')}
           >
             <Card style={styles.yellowCard}>
               <View style={styles.cardContainer}>
@@ -118,7 +120,7 @@ export default function PositivityToolBox({navigation}:  StackScreenProps<RootSt
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log("moving")}
+            onPress={() => console.log('moving')}
           >
             <Card style={styles.blueCard}>
               <View style={styles.cardContainer}>
@@ -156,77 +158,77 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.light.background,
   },
   getStartedContainer: {
-    justifyContent: "center",
+    justifyContent: 'center',
     marginHorizontal: 30,
   },
   getStartedText: {
     fontSize: 24,
-    color: "rgba(96,100,109, 1)",
+    color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
-    textAlign: "center",
+    textAlign: 'center',
     marginBottom: 16,
   },
   touchable: {
     paddingTop: 30,
   },
   cardContainer: {
-    width: "100%",
+    width: '100%',
     flex: 1,
-    flexDirection: "row",
-    flexWrap: "wrap",
-    alignItems: "flex-start",
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
   },
   cardTitle: {
-    width: "60%",
+    width: '60%',
     height: 100,
     padding: 10,
   },
   cardContent: {
-    backgroundColor: "transparent",
-    width: "39%",
+    backgroundColor: 'transparent',
+    width: '39%',
     height: 100,
     padding: 10,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   purpleCard: {
     backgroundColor: CardColors.purple,
-    width: "100%", // Required to make it work on Android
+    width: '100%', // Required to make it work on Android
     height: 100, //Required to make it work on Android
     paddingLeft: 15,
     paddingRight: 15,
   },
   pinkCard: {
     backgroundColor: CardColors.pink,
-    width: "100%",
+    width: '100%',
     height: 100,
     paddingLeft: 15,
     paddingRight: 15,
   },
   orangeCard: {
     backgroundColor: CardColors.orange,
-    width: "100%",
+    width: '100%',
     height: 100,
     paddingLeft: 15,
     paddingRight: 15,
   },
   greenCard: {
     backgroundColor: CardColors.green,
-    width: "100%",
+    width: '100%',
     height: 100,
     paddingLeft: 15,
     paddingRight: 15,
   },
   yellowCard: {
     backgroundColor: CardColors.yellow,
-    width: "100%",
+    width: '100%',
     height: 100,
     paddingLeft: 15,
     paddingRight: 15,
   },
   blueCard: {
     backgroundColor: CardColors.blue,
-    width: "100%",
+    width: '100%',
     height: 100,
     paddingLeft: 15,
     paddingRight: 15,
