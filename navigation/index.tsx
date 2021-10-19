@@ -58,7 +58,7 @@ function RootNavigator() {
         component={SignUpScreen}
         options={{ title: 'Sign up' }}
       />
-      <Stack.Screen
+      {/* <Stack.Screen
         name="PositivityToolBox"
         component={PositivityToolBoxScreen}
         options={{ title: 'Positivity ToolBox' }}
@@ -67,7 +67,7 @@ function RootNavigator() {
         name="AffirmationScreen"
         component={AffirmationScreen}
         options={{ title: 'Affirmation' }}
-      />
+      /> */}
     </Stack.Navigator>
   );
 }

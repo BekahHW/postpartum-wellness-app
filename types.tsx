@@ -4,7 +4,7 @@ export type RootStackParamList = {
   SignIn: undefined;
   SignUp: undefined;
   PositivityToolBox: undefined;
-  AffirmationScreen: undefined;
+  Affirmation: undefined;
 };
 
 export type BottomTabParamList = {
@@ -23,6 +23,7 @@ export type HomeParamList = {
 
 export type PositivityToolBoxParamList = {
   PositivityToolBoxScreen: undefined;
+  Affirmation: undefined;
 };
 
 export type ProfileParamList = {
