@@ -7,45 +7,59 @@ import {RootStackParamList} from "../types";
 export default function SignUpScreen({ navigation }: StackScreenProps<RootStackParamList, "SignUp">) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [signedUp, setSignedUp] = useState(false);
+
+  const signedUpMessage = (
+    <Text style={styles.container}>
+      Thank you for signing up! Please check your email for verification.
+    </Text>
+  );
+
+  const signUpForm = (
+    <View style={styles.container}>
+      <TextInput
+        style={styles.textInput}
+        mode="outlined"
+        label="Username"
+        value={username}
+        onChangeText={(text) => setUsername(text)}
+        onSubmitEditing={() => console.log("submit")}
+      />
+
+      <TextInput
+        style={styles.textInput}
+        mode="outlined"
+        label="Password"
+        value={password}
+        onChangeText={(text) => setPassword(text)}
+        secureTextEntry={true}
+        onSubmitEditing={() => console.log("submit")}
+      />
+      <TextInput
+        style={styles.textInput}
+        mode="outlined"
+        label="Re-enter password for validation"
+        value={password}
+        onChangeText={(text) => setPassword(text)}
+        secureTextEntry={true}
+        onSubmitEditing={() => console.log("submit")}
+      />
+      <Button
+        style={styles.button}
+        mode="contained"
+        onPress={() => setSignedUp(true)}
+      >
+        Sign-Up!
+      </Button>
+    </View>
+  );
+
 
   return (
     <View style={styles.container}>
       <View style={styles.getStartedContainer}>
         <Text style={styles.getStartedText}>Postpartum Wellness Signup</Text>
-        <TextInput
-          style={styles.textInput}
-          mode="outlined"
-          label="Username"
-          value={username}
-          onChangeText={(text) => setUsername(text)}
-          onSubmitEditing={() => console.log("submit")}
-        />
-
-        <TextInput
-          style={styles.textInput}
-          mode="outlined"
-          label="Password"
-          value={password}
-          onChangeText={(text) => setPassword(text)}
-          secureTextEntry={true}
-          onSubmitEditing={() => console.log("submit")}
-        />
-        <TextInput
-          style={styles.textInput}
-          mode="outlined"
-          label="Re-enter password for validation"
-          value={password}
-          onChangeText={(text) => setPassword(text)}
-          secureTextEntry={true}
-          onSubmitEditing={() => console.log("submit")}
-        />
-        <Button
-          style={styles.button}
-          mode="contained"
-          onPress={() => navigation.navigate("Root")}
-        >
-          Sign-Up!
-        </Button>
+        {signedUp ? signedUpMessage : signUpForm}
       </View>
     </View>
   );
