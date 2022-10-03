@@ -4,16 +4,24 @@ import { StyleSheet, Text, View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 import {RootStackParamList} from "../types";
 
+interface PasswordState {
+  password: string;
+  rePassword: string;
+}
+
 export default function SignUpScreen({ navigation }: StackScreenProps<RootStackParamList, "SignUp">) {
   const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [passwords, setPasswords] = useState<PasswordState>({
+    password: '',
+    rePassword: '',
+  });
   const [signedUp, setSignedUp] = useState(false);
 
   const signedUpMessage = (
     <Text style={styles.container}>
       Thank you for signing up! Please check your email for verification.
     </Text>
-  );
+  );  
 
   const signUpForm = (
     <View style={styles.container}>
@@ -22,16 +30,16 @@ export default function SignUpScreen({ navigation }: StackScreenProps<RootStackP
         mode="outlined"
         label="Username"
         value={username}
-        onChangeText={(text) => setUsername(text)}
-        onSubmitEditing={() => console.log("submit")}
+        onChangeText={(text: string) => setUsername(text)}
+        onSubmitEditing={() => console.log('submit')}
       />
 
       <TextInput
         style={styles.textInput}
         mode="outlined"
         label="Password"
-        value={password}
-        onChangeText={(text) => setPassword(text)}
+        value={passwords.password}
+        onChangeText={(password: string) => setPasswords(prev => ({...prev, password}))}
         secureTextEntry={true}
         onSubmitEditing={() => console.log("submit")}
       />
@@ -39,8 +47,8 @@ export default function SignUpScreen({ navigation }: StackScreenProps<RootStackP
         style={styles.textInput}
         mode="outlined"
         label="Re-enter password for validation"
-        value={password}
-        onChangeText={(text) => setPassword(text)}
+        value={passwords.rePassword}
+        onChangeText={(rePassword: string) => setPasswords(prev => ({ ...prev, rePassword }))}
         secureTextEntry={true}
         onSubmitEditing={() => console.log("submit")}
       />
