@@ -18,6 +18,7 @@ import ResourcesScreen from '../screens/ResourcesScreen';
 import ProfileScreen from '../screens/CreateProfileScreen';
 import PositivityToolBoxScreen from '../screens/PositivityToolBoxScreen';
 import AffirmationScreen from '../screens/AffirmationScreen';
+import MindfulnessScreen from '../screens/MindfulnessScreen'
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -112,6 +113,10 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="Affirmation"
         component={AffirmationScreen}
+      ></TabTwoStack.Screen>
+      <TabTwoStack.Screen
+        name="Mindfulness"
+        component={MindfulnessScreen}
       ></TabTwoStack.Screen>
     </TabTwoStack.Navigator>
   );
