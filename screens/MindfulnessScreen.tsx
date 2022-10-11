@@ -9,15 +9,15 @@ export default function MindfulnessScreen() {
     'What do you see?',
     'What can you taste?',
     'What can you smell?',
-    'What can you feel',
+    'What can you feel?',
   ];
   return (
     <View style={styles.container}>
       <View style={styles.getStartedContainer}>
         <Text style={styles.getStartedText}>{mindfulnessActivity}</Text>
-        {mindfulnessQuestions.map((q) => (
-          <Text style={styles.getStartedList}>
-            {'\u2022'} {q}
+        {mindfulnessQuestions.map((question, i) => (
+          <Text key={i} style={styles.getStartedList}>
+            {'\u2022'} {question}
           </Text>
         ))}
       </View>
