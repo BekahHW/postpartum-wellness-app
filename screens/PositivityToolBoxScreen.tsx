@@ -52,7 +52,7 @@ export default function PositivityToolBox({
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.touchable}
-            onPress={() => console.log('mindfulness')}
+            onPress={() => navigation.navigate('Mindfulness')}
           >
             <Card style={styles.pinkCard}>
               <View style={styles.cardContainer}>
