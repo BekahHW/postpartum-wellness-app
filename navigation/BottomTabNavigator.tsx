@@ -118,6 +118,10 @@ function TabTwoNavigator() {
         name="Mindfulness"
         component={MindfulnessScreen}
       ></TabTwoStack.Screen>
+      <TabTwoStack.Screen
+        name="Resources"
+        component={ResourcesScreen}
+      ></TabTwoStack.Screen>
     </TabTwoStack.Navigator>
   );
 }
