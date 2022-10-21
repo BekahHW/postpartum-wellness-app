@@ -1,95 +1,68 @@
-import React from "react";
-import { StyleSheet, Text, View, Linking } from "react-native";
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
+import { Card, Paragraph } from 'react-native-paper';
+
+import Colors from '../constants/Colors';
 
 export default function ResourcesScreen() {
+  const immediateHelpLinks = [
+    'SAMHSA',
+    'PSI - Postpartum Support International',
+    'National Suicide Hotline',
+  ];
   return (
-    <View style={styles.container}>
-      <View style={styles.getStartedContainer}>
-        <View style={styles.bottomMargin}>
-          <Text style={styles.getStartedText}>
-            Suicide hotline:{" "}
-            <Text
-              style={styles.linkText}
-              onPress={() => Linking.openURL("tel:18002738255")}
-            >
-              1-800-273-8255
+    <ScrollView contentContainerStyle={styles.contentContainer}>
+      <View style={styles.container}>
+        <View style={styles.getStartedContainer}>
+          {immediateHelpLinks.map((link, i) => (
+            <Text key={i} style={styles.getStartedList}>
+              {'\u2022'} {link}
             </Text>
-          </Text>
+          ))}
         </View>
-        <View>
-          <Text style={styles.getStartedText}>Resources for moms:</Text>
-          <Text
-            style={styles.linkText}
-            onPress={() =>
-              Linking.openURL(
-                "https://www.postpartum.net/get-help/help-for-moms/"
-              )
-            }
-          >
-            Postpartum Help for Moms
-          </Text>
-          <Text
-            style={styles.linkText}
-            onPress={() =>
-              Linking.openURL(
-                "https://www.birthtraumaassociation.org.uk/for-parents/"
-              )
-            }
-          >
-            Support for Women Who Suffer Birth Trauma
-          </Text>
-          <Text
-            style={styles.linkText}
-            onPress={() =>
-              Linking.openURL(
-                "https://healthyfamilies.beyondblue.org.au/pregnancy-and-new-parents/maternal-mental-health-and-wellbeing/mental-health-checklist-for-mums"
-              )
-            }
-          >
-            Maternal Mental Health and Wellbeing
-          </Text>
-          <Text
-            style={styles.linkText}
-            onPress={() => Linking.openURL("https://www.panda.org.au/")}
-          >
-            Support on Mental Health of Expecting and New Parents
-          </Text>
-        </View>
-        <View>
-          <Text style={styles.getStartedText}>Support for dads:</Text>
-          <Text
-            style={styles.linkText}
-            onPress={() =>
-              Linking.openURL(
-                "https://www.postpartum.net/get-help/resources-for-fathers/dads-mental-health/"
-              )
-            }
-          >
-            Help for Dads during the Postpartum Period
-          </Text>
-          <Text
-            style={styles.linkText}
-            onPress={() =>
-              Linking.openURL(
-                "https://postpartum.org/services/dads/tips-help-dads-deal-ppda/"
-              )
-            }
-          >
-            Where Dads Can Go for Help
-          </Text>
-          <Text
-            style={styles.linkText}
-            onPress={() =>
-              Linking.openURL(
-                "http://postpartummen.com/online-forum/"
-              )
-            }
-          >
-            Postpartum Men Forum
-          </Text>
+        <View style={styles.container}>
+          <View style={styles.getStartedContainer}>
+            <TouchableOpacity onPress={() => console.log('cc')}>
+              <Card style={styles.blueCard}>
+                <View style={styles.cardContainer}>
+                  <Card.Title
+                    title="Postpartum Mood Disorders"
+                    subtitle="Fact, guidelines"
+                    style={styles.cardTitle}
+                  />
+                  <Card.Content style={styles.cardContent}>
+                    <Paragraph>
+                      Resources on how to help moms and identify postpartum mood
+                      disorders
+                    </Paragraph>
+                  </Card.Content>
+                </View>
+              </Card>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => console.log('family support')}>
+              <Card style={styles.blueCard}>
+                <View style={styles.cardContainer}>
+                  <Card.Title
+                    title="Family Support"
+                    subtitle="Fact, guidelines"
+                    style={styles.cardTitle}
+                  />
+                  <Card.Content style={styles.cardContent}>
+                    <Paragraph>Resources on Family Support</Paragraph>
+                  </Card.Content>
+                </View>
+              </Card>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -100,27 +73,39 @@ ResourcesScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#fff",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    marginBottom: 8,
+  },
+  contentContainer: {
+    paddingTop: 15,
+    paddingBottom: 15,
+    backgroundColor: Colors.light.background,
   },
   getStartedContainer: {
-    alignItems: "flex-start",
-    justifyContent: "center",
     marginHorizontal: 50,
   },
-  getStartedText: {
-    fontSize: 24,
-    color: "rgba(96,100,109, 1)",
-    lineHeight: 24,
-    marginBottom: 16,
+  getStartedList: {
+    fontSize: 20,
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: 20,
+    marginBottom: 2,
   },
-  linkText: {
-    color: "blue",
-    lineHeight: 24,
-    marginBottom: 16,
+  cardContainer: {
+    width: '100%',
+    paddingBottom: 15,
+    paddingLeft: 10,
   },
-  bottomMargin: {
-    marginBottom: 16,
+  cardContent: {
+    paddingLeft: 0,
+  },
+  cardTitle: {
+    paddingLeft: 0,
+  },
+  blueCard: {
+    backgroundColor: '#d0eaff',
+    width: '100%',
+    marginTop: 20,
   },
 });
