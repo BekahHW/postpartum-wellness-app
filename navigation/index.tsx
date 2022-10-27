@@ -17,6 +17,7 @@ import LinkingConfiguration from './LinkingConfiguration';
 import PositivityToolBoxScreen from '../screens/PositivityToolBoxScreen';
 import ContactFriendsScreen from '../screens/ContactFriendsScreen';
 import AffirmationScreen from '../screens/AffirmationScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -56,6 +57,11 @@ function RootNavigator() {
       <Stack.Screen
         name="SignUp"
         component={SignUpScreen}
+        options={{ title: 'Sign up' }}
+      />
+      <Stack.Screen
+        name="Profile"
+        component={ProfileScreen}
         options={{ title: 'Sign up' }}
       />
       {/* <Stack.Screen
