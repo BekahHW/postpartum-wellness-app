@@ -7,6 +7,7 @@ export type RootStackParamList = {
   Affirmation: undefined;
   Mindfulness: undefined;
   Profile: undefined;
+  Resources: undefined;
 };
 
 export type BottomTabParamList = {
@@ -27,6 +28,7 @@ export type PositivityToolBoxParamList = {
   PositivityToolBoxScreen: undefined;
   Affirmation: undefined;
   Mindfulness: undefined;
+  Resources: undefined;
 };
 
 export type ProfileParamList = {
