@@ -16,8 +16,12 @@ export default function ProfileScreen() {
           source={require('../assets/images/sample-avatar.png')}
         />
         <View style={styles.userInfoTextContainer}>
-          <Text style={styles.name}>First Last Name</Text>
-          <Text style={styles.babyName}>Baby's name Mom</Text>
+          <View style={styles.nameView}>
+            <Text style={styles.name}>First Last Name</Text>
+          </View>
+          <View style={styles.babyNameView}>
+            <Text style={styles.babyName}>Baby's name Mom</Text>
+          </View>
         </View>
       </View>
       <View style={styles.trackedContainer}>
@@ -59,15 +63,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     padding: 16,
-    height: '30%',
+    height: '20%',
   },
   trackedContainer: {
     height: '10%',
+    justifyContent: 'center',
   },
   actionsContainer: {
-    height: '50%',
-    disaply: 'flex',
+    height: '45%',
+    display: 'flex',
     justifyContent: 'center',
+    marginTop: 20,
   },
   profilePhoto: {
     width: 128,
@@ -78,32 +84,37 @@ const styles = StyleSheet.create({
   },
   button: {
     minWidth: 200,
-    marginBottom: 16,
+    marginTop: 16,
   },
   trackingText: {
     fontSize: 20,
     color: '#49444B',
   },
-  name: {
+  nameView: {
     width: Dimensions.get('window').width - 200,
     backgroundColor: '#F8F8F2',
     borderRadius: 28,
-    fontSize: 20,
-    color: '#49444B',
-    fontWeight: 'bold',
     paddingLeft: 16,
     paddingTop: 8,
     paddingBottom: 8,
     marginBottom: 5,
   },
-  babyName: {
+  name: {
+    fontSize: 20,
+    color: '#49444B',
+    fontWeight: 'bold',
+
+  },
+  babyNameView: {
     width: Dimensions.get('window').width - 250,
     backgroundColor: '#BEE4E7',
     borderRadius: 4,
+    padding: 4,
+    marginLeft: 8,
+  },
+  babyName: {
     fontSize: 18,
     color: '#49444B',
     fontWeight: 'bold',
-    padding: 4,
-    marginLeft: 8,
   },
 });
