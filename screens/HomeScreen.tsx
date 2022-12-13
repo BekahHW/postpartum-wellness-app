@@ -38,6 +38,13 @@ export default function HomeScreen({
           >
             Sign-Up
           </Button>
+          <Button
+            style={styles.button}
+            mode="contained"
+            onPress={() => navigation.replace('Profile')}
+          >
+            View Profile
+          </Button>
         </View>
       </ScrollView>
     </View>
