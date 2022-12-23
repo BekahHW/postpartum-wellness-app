@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Button, TextInput } from "react-native-paper";
+import React, { useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Button, TextInput } from 'react-native-paper';
 
-
-export default function SignInScreen() {
+function SignInScreen() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -81,3 +80,4 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
 });
+export default withAuthenticator(SignInScreen);
