@@ -7,6 +7,7 @@ function SignInScreen() {
   const [password, setPassword] = useState("");
 
   return (
+    
     <View style={styles.container}>
       <View style={styles.getStartedContainer}>
         <Text style={styles.getStartedText}>Postpartum Wellness</Text>
@@ -15,7 +16,7 @@ function SignInScreen() {
           mode="outlined"
           label="Username"
           value={username}
-          onChangeText={(text) => setUsername(text)}
+          onChangeText={(text: string) => setUsername(text)}
           onSubmitEditing={() => console.log("submit")}
         />
         <TextInput
@@ -23,7 +24,7 @@ function SignInScreen() {
           mode="outlined"
           label="Password"
           value={password}
-          onChangeText={(text) => setPassword(text)}
+          onChangeText={(text: string) => setPassword(text)}
           secureTextEntry={true}
           onSubmitEditing={() => console.log("submit")}
         />
@@ -36,6 +37,7 @@ function SignInScreen() {
         </Button>
       </View>
     </View>
+    
   );
 }
 
@@ -80,4 +82,4 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
 });
-export default withAuthenticator(SignInScreen);
+export default SignInScreen;
