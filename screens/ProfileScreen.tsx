@@ -93,22 +93,22 @@ const styles = StyleSheet.create({
   nameView: {
     width: Dimensions.get('window').width - 200,
     backgroundColor: '#F8F8F2',
-    borderRadius: 28,
+    borderRadius: 8,
     paddingLeft: 16,
     paddingTop: 8,
     paddingBottom: 8,
-    marginBottom: 5,
+    marginBottom: 8,
+    marginLeft: 8,
   },
   name: {
     fontSize: 20,
     color: '#49444B',
     fontWeight: 'bold',
-
   },
   babyNameView: {
     width: Dimensions.get('window').width - 250,
     backgroundColor: '#BEE4E7',
-    borderRadius: 4,
+    borderRadius: 8,
     padding: 4,
     marginLeft: 8,
   },
