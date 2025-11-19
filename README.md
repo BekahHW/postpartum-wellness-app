@@ -1,71 +1,194 @@
-# What is the Postpartum Wellness App
+# Postpartum Wellness App
 
-This app is to help women monitor their mental and physical wellness after having a baby. With a new baby, life is full of new and exciting things as well as challenges. For some women, being aware of their mental and physical health helps them to take care of themselves. Other women face postpartum depression, anxiety, PTSD, other postpartum mood disorders. And it happens more frequently than we realize or talk about. This app is meant to help postpartum moms find a healthy path post birth, to provide a resource for monitoring their mental health, and to provide support that can lead to early diagnoses of postpartum mental health disorders.
+A compassionate mobile app designed to support postpartum mental and physical wellness through evidence-based tools, community connection, and accessible resources.
 
-The profile keeps track of important information in order to help each user determine where they need help or to monitor daily habits. The app will also help you to celebrate your wins and find community or help when you need it.
+## Overview
 
-# Project Goals
+This app helps women monitor their mental and physical wellness after having a baby. Postpartum depression, anxiety, PTSD, and other mood disorders happen more frequently than we realize or talk about. This app provides:
 
-This is a passion project, and I'm learning as I go. Ultimately, the project will collect enough data to provide support to women who are facing postpartum mental health issues. Currently, the project is in Phase 1, setting up basic UI elements, without the full styling and custom art we see in the future.
+- 🧘‍♀️ **Wellness Toolbox** - Daily affirmations, mindfulness, breathing exercises, gentle movement, and more
+- 🤝 **Mentor Connection** - Private, judgment-free support from trained postpartum mentors
+- 📊 **Mood Tracking** - Monitor your emotional wellbeing over time
+- 📚 **Resources** - Direct access to crisis support and educational materials
+- 👤 **Profile Management** - Track your journey and celebrate your wins
 
-This will likely be a long running project, with multiple phases that will include:
+The goal is to help postpartum moms find a healthy path post-birth and support early diagnosis of postpartum mental health challenges.
 
-- Working with AWS Amplify
-- Creating a clear [workflow](https://www.figma.com/file/GV6j3SxSSPZEpql0xV2etL/Workflows?node-id=0%3A1)
-- Creating a clear [design aesthetic](https://www.figma.com/file/WB41mEaTanI6PWldMfENxQ/Material-Design-Theme-Kit-Copy)
-- Machine learning
+## ✨ Features
 
-If any of that sounds interesting, don't hesitate to take a look at one of our [issues](https://github.com/BekahHW/postpartum-wellness-app/issues) and dive in.
+### Wellness Toolbox
+All features are now fully implemented with beautiful, calming UI:
 
-# Run and Install
+- **Affirmations** - 16 curated affirmations for postpartum moms
+- **Mindfulness** - 5-sense grounding exercise
+- **Breathing** - Animated 4-4-4 breathing exercise with real-time guidance
+- **Laughter & Light** - Uplifting mom life moments and humor
+- **Guided Visualization** - Three peaceful visualization journeys (beach, garden, mountain)
+- **Gentle Movement** - Safe postpartum exercises with detailed instructions
 
-1. If you don't have it already, download and install [NODE.js](https://nodejs.org/en/download/)
-2. Install [Yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable) if you don't have it.
-3. Download and install [Expo-CLI](https://expo.io/tools#cli) via
-   `yarn global add expo-cli`
-4. [Fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) this repo
-5. Create a local copy on your machine
-6. In a shell terminal/command line run:
+### Support & Resources
+- **Mentor Connection** - Connect with non-judgmental mentors (requires backend - see docs)
+- **Crisis Support** - One-tap access to 988, PSI Helpline, and emergency services
+- **Educational Resources** - Learn about postpartum mood disorders and family support
 
+### Design
+- 🎨 Light, balanced, simple, and inviting aesthetic
+- 🌸 Soft color palette (rose, sage, peach, lavender, cream, sky)
+- ♿ Accessible and easy to navigate
+- 🌓 Dark mode support
+
+## 📱 Screenshots
+
+[Screenshots would go here in production]
+
+## 🏗️ Project Status & Roadmap
+
+### ✅ Phase 1: Complete
+- Beautiful UI/UX design with calming color scheme
+- All wellness features fully implemented
+- Navigation structure and routing
+- Resource screens and crisis support
+- Profile creation and management
+
+### 🚧 Phase 2: Backend Integration (In Progress)
+- User authentication (UI ready, needs backend)
+- Data persistence with AWS Amplify
+- Mentor connection privacy service (critical - see docs)
+- Mood tracking analytics
+- Push notifications
+
+### 🔮 Phase 3: Advanced Features (Planned)
+- Machine learning for early detection
+- Community features
+- Custom art and illustrations
+- Multi-language support
+
+**Want to contribute?** Check out our [issues](https://github.com/BekahHW/postpartum-wellness-app/issues)!
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js (v18+)
+- npm or yarn
+- Expo CLI
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/BekahHW/postpartum-wellness-app.git
+   cd postpartum-wellness-app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm start
+   # or
+   expo start
+   ```
+
+4. **Run the app**
+   - **iOS**: Press `i` or run `npm run ios`
+   - **Android**: Press `a` or run `npm run android`
+   - **Web**: Press `w` or run `npm run web`
+   - **Physical device**: Scan QR code with Expo Go app
+
+### Testing
+```bash
+npm test          # Run tests in watch mode
+npm run lint      # Check code quality
+npm run format    # Format code with Prettier
 ```
-yarn
-```
 
-6. Run the live development server with:
+## 📖 Documentation
 
-```
-yarn start
-```
+Comprehensive guides for developers:
 
-From here, the app can be run a couple of different ways. If you have XCode, you can run the app on your computer. (With X-Code, instead of `yarn start` you can run `yarn ios` or `yarn android`.) If you don't have XCode that's fine! You'll see a QR code popup, you can access the app on your phone through the QR code. You will need the expo app.
-A more in-depth guide for contributing can be found in the [CONTRIBUTING](https://github.com/BekahHW/postpartum-wellness-app/blob/master/CONTRIBUTING.md)
+- **[Development Setup](docs/DEVELOPMENT_SETUP.md)** - Complete development environment setup
+- **[Backend Setup](docs/BACKEND_SETUP.md)** - AWS Amplify, database, and API configuration
+- **[Mentor Connection Privacy](docs/MENTOR_CONNECTION_PRIVACY.md)** - Critical privacy implementation for mentor calling feature
 
-The page will reload if you make edits and save.
-You will also see any lint errors in the console.
-
-```
-yarn test
-```
-
-Launches the test runner in the interactive watch mode.
-
-- If you're working on a UI element, [Expo's Sandbox](https://snack.expo.io/) is a great place to test it out without having to run the app.
+**Important:** The mentor connection feature requires backend implementation to protect user privacy. See the documentation for details.
 
 # Code of Conduct
 
 This is an inclusive space for education, learning and healthy communication. We ask that before you engage with the repository, please check out the [Code of Conduct](https://github.com/tkshill/Quarto/blob/main/CODE_OF_CONDUCT.md). This repo will serve as a learning experience not only in functional programming and UI design, but also in good community interactions. As much as possible, all contributors should feel safe, respected, and appreciated for their efforts.
 
-# Tech Stack
+## 🛠️ Tech Stack
 
-- [React Native](https://github.com/expo/react-native/archive/sdk-39.0.2.tar.gz)
-- [Expo](https://expo.io/learn) Expo is a framework and a platform for universal React applications. It is a set of tools and services built around React Native and native platforms that help you develop, build, deploy, and quickly iterate on iOS, Android, and web apps from the same JavaScript/TypeScript codebase.
-- [React Native Paper](https://callstack.github.io/react-native-paper/) cross-platform Material Design for React Native
-- [AWS Amplify](https://docs.amplify.aws/start/q/integration/react) as the mobile backend as a service
-- [React Native Testing Library](https://testing-library.com/docs/react-native-testing-library/intro) for testing
+### Frontend
+- **React Native** 0.74.2
+- **Expo** SDK 51
+- **TypeScript** 5.3.3
+- **React Navigation** 6.x (Native Stack & Bottom Tabs)
+- **React Native Paper** 5.12.3 (Material Design)
 
-# Contact
+### Backend (Planned)
+- **AWS Amplify** - Authentication, API, DataStore
+- **Twilio** - Mentor connection with privacy protection
+- **AWS Lambda** - Serverless functions
 
-The primary way to communicate about this project is through issues, but you can also reach me at [@bekahhw](https://twitter.com/BekahHW) on Twitter.
+### Development Tools
+- **Jest** & **React Testing Library** - Testing
+- **ESLint** & **Prettier** - Code quality
+- **Storybook** - Component development
+- **TypeScript** - Type safety
+
+### Design System
+- Custom light, balanced color palette
+- Soft rose, sage, peach, lavender, cream, sky blues
+- Material Design components
+- Undraw.co illustrations
+
+## 🤝 Contributing
+
+We welcome contributions! This project serves as both a valuable resource for postpartum wellness and a learning opportunity for developers.
+
+**Ways to contribute:**
+- 🐛 Report bugs and issues
+- 💡 Suggest new features
+- 🎨 Improve UI/UX
+- 📝 Improve documentation
+- 🔧 Fix bugs or implement features
+- 🧪 Write tests
+
+**Getting started:**
+1. Read the [Code of Conduct](CODE_OF_CONDUCT.md)
+2. Check out [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines
+3. Browse [open issues](https://github.com/BekahHW/postpartum-wellness-app/issues)
+4. Join the conversation!
+
+## 📄 License
+
+[Your license here]
+
+## 🙏 Acknowledgments
+
+- Virtual Coffee community for support
+- All contributors who have helped build this app
+- Postpartum Support International for resources and inspiration
+
+## 📞 Contact
+
+- **Primary contact**: Issues on GitHub
+- **Twitter**: [@bekahhw](https://twitter.com/BekahHW)
+
+## ⚠️ Disclaimer
+
+This app is not a substitute for professional medical advice, diagnosis, or treatment. If you are experiencing a mental health crisis, please call 988 (Suicide & Crisis Lifeline) or 911 immediately.
+
+---
 
 [![Virtual Coffee](https://img.shields.io/badge/Virtual-Coffee-red)](https://virtualcoffee.io)
-[![runs with expo](https://img.shields.io/badge/Runs%20with%20Expo-4630EB.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000)](https://expo.io/)
+[![runs with expo](https://img.shields.io/badge/Runs%20with%20Expo-000000.svg?style=flat-square&logo=EXPO&labelColor=ffffff&logoColor=000)](https://expo.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
+
+Made with 💝 for postpartum wellness
