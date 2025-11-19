@@ -6,8 +6,13 @@ export type RootStackParamList = {
   PositivityToolBox: undefined;
   Affirmation: undefined;
   Mindfulness: undefined;
+  Breathing: undefined;
+  Laughing: undefined;
+  Visualization: undefined;
+  Moving: undefined;
   Profile: undefined;
   Resources: undefined;
+  MentorConnection: undefined;
 };
 
 export type BottomTabParamList = {
@@ -20,15 +25,16 @@ export type HomeParamList = {
   HomeScreen: undefined;
 };
 
-/* export type ResourcesParamList = {
-  ResourcesScreen: undefined;
-}; */
-
 export type PositivityToolBoxParamList = {
   PositivityToolBoxScreen: undefined;
   Affirmation: undefined;
   Mindfulness: undefined;
+  Breathing: undefined;
+  Laughing: undefined;
+  Visualization: undefined;
+  Moving: undefined;
   Resources: undefined;
+  MentorConnection: undefined;
 };
 
 export type ProfileParamList = {

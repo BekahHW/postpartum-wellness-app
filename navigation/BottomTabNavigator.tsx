@@ -1,8 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
-import { Platform } from 'react-native';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
@@ -18,12 +17,13 @@ import ResourcesScreen from '../screens/ResourcesScreen';
 import ProfileScreen from '../screens/CreateProfileScreen';
 import PositivityToolBoxScreen from '../screens/PositivityToolBoxScreen';
 import AffirmationScreen from '../screens/AffirmationScreen';
-import MindfulnessScreen from '../screens/MindfulnessScreen'
+import MindfulnessScreen from '../screens/MindfulnessScreen';
+import BreathingScreen from '../screens/BreathingScreen';
+import LaughingScreen from '../screens/LaughingScreen';
+import VisualizationScreen from '../screens/VisualizationScreen';
+import MovingScreen from '../screens/MovingScreen';
+import MentorConnectionScreen from '../screens/MentorConnectionScreen';
 
-const config = Platform.select({
-  web: { headerMode: 'screen' },
-  default: {},
-});
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
@@ -32,46 +32,36 @@ export default function BottomTabNavigator() {
   return (
     <BottomTab.Navigator
       initialRouteName="Home"
-      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}
+      screenOptions={{
+        tabBarActiveTintColor: Colors[colorScheme].tint,
+        tabBarStyle: {
+          backgroundColor: Colors[colorScheme].tabBar,
+        },
+      }}
     >
       <BottomTab.Screen
         name="Home"
         component={TabOneNavigator}
         options={{
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={
-                Platform.OS === 'ios'
-                  ? `ios-information-circle${focused ? '' : '-outline'}`
-                  : 'md-information-circle'
-              }
-              color={color}
-            />
-          ),
+          headerShown: false,
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         }}
       />
       <BottomTab.Screen
         name="PositivityToolBox"
         component={TabTwoNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon
-              name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
-              color={color}
-            />
-          ),
+          headerShown: false,
+          tabBarLabel: 'Wellness',
+          tabBarIcon: ({ color }) => <TabBarIcon name="heart" color={color} />,
         }}
       />
       <BottomTab.Screen
         name="Profile"
         component={TabThreeNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon
-              name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
-              color={color}
-            />
-          ),
+          headerShown: false,
+          tabBarIcon: ({ color }) => <TabBarIcon name="person" color={color} />,
         }}
       />
     </BottomTab.Navigator>
@@ -86,7 +76,7 @@ function TabBarIcon(props: { name: string; color: string }) {
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-const TabOneStack = createStackNavigator<HomeParamList>();
+const TabOneStack = createNativeStackNavigator<HomeParamList>();
 
 function TabOneNavigator() {
   return (
@@ -100,7 +90,7 @@ function TabOneNavigator() {
   );
 }
 
-const TabTwoStack = createStackNavigator<PositivityToolBoxParamList>();
+const TabTwoStack = createNativeStackNavigator<PositivityToolBoxParamList>();
 
 function TabTwoNavigator() {
   return (
@@ -108,24 +98,52 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="PositivityToolBoxScreen"
         component={PositivityToolBoxScreen}
-        options={{ headerTitle: 'PositivityToolBox' }}
+        options={{ headerTitle: 'Wellness Toolbox' }}
       />
       <TabTwoStack.Screen
         name="Affirmation"
         component={AffirmationScreen}
-      ></TabTwoStack.Screen>
+        options={{ headerTitle: 'Daily Affirmation' }}
+      />
       <TabTwoStack.Screen
         name="Mindfulness"
         component={MindfulnessScreen}
-      ></TabTwoStack.Screen>
+        options={{ headerTitle: 'Mindfulness' }}
+      />
+      <TabTwoStack.Screen
+        name="Breathing"
+        component={BreathingScreen}
+        options={{ headerTitle: 'Breathing Exercise' }}
+      />
+      <TabTwoStack.Screen
+        name="Laughing"
+        component={LaughingScreen}
+        options={{ headerTitle: 'Laughter & Light' }}
+      />
+      <TabTwoStack.Screen
+        name="Visualization"
+        component={VisualizationScreen}
+        options={{ headerTitle: 'Guided Visualization' }}
+      />
+      <TabTwoStack.Screen
+        name="Moving"
+        component={MovingScreen}
+        options={{ headerTitle: 'Gentle Movement' }}
+      />
       <TabTwoStack.Screen
         name="Resources"
         component={ResourcesScreen}
-      ></TabTwoStack.Screen>
+        options={{ headerTitle: 'Resources & Support' }}
+      />
+      <TabTwoStack.Screen
+        name="MentorConnection"
+        component={MentorConnectionScreen}
+        options={{ headerTitle: 'Connect with a Mentor' }}
+      />
     </TabTwoStack.Navigator>
   );
 }
-const TabThreeStack = createStackNavigator<ProfileParamList>();
+const TabThreeStack = createNativeStackNavigator<ProfileParamList>();
 
 function TabThreeNavigator() {
   return (

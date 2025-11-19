@@ -1,236 +1,218 @@
-import React, { useState } from 'react';
-import { RootStackParamList } from '../types';
-import { StackScreenProps } from '@react-navigation/stack';
-import { Button, Card, Title, Paragraph } from 'react-native-paper';
+import React from 'react';
+import { PositivityToolBoxParamList } from '../types';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { Card } from 'react-native-paper';
 import {
   StyleSheet,
   Text,
   View,
   ScrollView,
   TouchableOpacity,
-  Switch,
-  SafeAreaView,
 } from 'react-native';
 import Colors from '../constants/Colors';
 import CardColors from '../constants/CardColors';
+import useColorScheme from '../hooks/useColorScheme';
 import BreathingSvg from '../assets/undraw_svgs/BreathingSvg';
 import LovingItSvg from '../assets/undraw_svgs/LovingItSvg';
 import MeditatingSvg from '../assets/undraw_svgs/MeditatingSvg';
 import FeelingHappySvg from '../assets/undraw_svgs/FeelingHappySvg';
 import FlowersSvg from '../assets/undraw_svgs/FlowersSvg';
 import NatureBenefitsSvg from '../assets/undraw_svgs/NatureBenefits';
-import Constants from 'expo-constants';
-import AffirmationScreen from './AffirmationScreen';
 
-export default function PositivityToolBox({
-  navigation,
-}: StackScreenProps<RootStackParamList, 'PositivityToolBox'>) {
+type Props = NativeStackScreenProps<PositivityToolBoxParamList, 'PositivityToolBoxScreen'>;
+
+export default function PositivityToolBox({ navigation }: Props) {
+  const colorScheme = useColorScheme();
+  const colors = Colors[colorScheme];
+
+  const tools = [
+    {
+      title: 'Affirmation',
+      subtitle: 'Positive reminders for today',
+      color: CardColors.lavender,
+      svg: <LovingItSvg />,
+      onPress: () => navigation.navigate('Affirmation'),
+    },
+    {
+      title: 'Mindfulness',
+      subtitle: 'Ground yourself in the moment',
+      color: CardColors.rose,
+      svg: <MeditatingSvg />,
+      onPress: () => navigation.navigate('Mindfulness'),
+    },
+    {
+      title: 'Breathing',
+      subtitle: 'Calm your mind and body',
+      color: CardColors.peach,
+      svg: <BreathingSvg />,
+      onPress: () => navigation.navigate('Breathing'),
+    },
+    {
+      title: 'Laughing',
+      subtitle: 'Find joy in the moment',
+      color: CardColors.sage,
+      svg: <FeelingHappySvg />,
+      onPress: () => navigation.navigate('Laughing'),
+    },
+    {
+      title: 'Visualization',
+      subtitle: 'Peaceful mental imagery',
+      color: CardColors.cream,
+      svg: <FlowersSvg />,
+      onPress: () => navigation.navigate('Visualization'),
+    },
+    {
+      title: 'Moving',
+      subtitle: 'Gentle movement for wellness',
+      color: CardColors.sky,
+      svg: <NatureBenefitsSvg />,
+      onPress: () => navigation.navigate('Moving'),
+    },
+  ];
+
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView
-        style={styles.scrollView}
-        contentContainerStyle={styles.contentContainer}
-      >
+    <View style={[styles.container, { backgroundColor: colors.background }]}>
+      <ScrollView contentContainerStyle={styles.scrollContent}>
+        <View style={styles.header}>
+          <Text style={[styles.title, { color: colors.text }]}>
+            Wellness Toolbox
+          </Text>
+          <Text style={[styles.subtitle, { color: colors.text }]}>
+            Choose a tool to support your wellbeing
+          </Text>
+        </View>
+
         <View style={styles.getStartedContainer}>
-          <Text style={styles.getStartedText}>Positivity Toolbox</Text>
-          <TouchableOpacity
-            style={styles.touchable}
-            onPress={() => navigation.navigate('Affirmation')}
-          >
-            <Card style={styles.purpleCard}>
-              <View style={styles.cardContainer}>
-                <Card.Content style={styles.cardContent}>
-                  <LovingItSvg />
-                </Card.Content>
-                <Card.Title
-                  title="Affirmation"
-                  subtitle="Some text here"
-                  style={styles.cardTitle}
-                ></Card.Title>
-              </View>
-            </Card>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.touchable}
-            onPress={() => navigation.navigate('Mindfulness')}
-          >
-            <Card style={styles.pinkCard}>
-              <View style={styles.cardContainer}>
-                <Card.Content style={styles.cardContent}>
-                  <MeditatingSvg />
-                </Card.Content>
-                <Card.Title
-                  title="Mindfulness"
-                  subtitle="Some text here"
-                  style={styles.cardTitle}
-                ></Card.Title>
-              </View>
-            </Card>
-          </TouchableOpacity>
+          {tools.map((tool, index) => (
+            <TouchableOpacity
+              key={index}
+              style={styles.touchable}
+              onPress={tool.onPress}
+              activeOpacity={0.7}
+            >
+              <Card style={[styles.card, { backgroundColor: tool.color }]}>
+                <View style={styles.cardContainer}>
+                  <Card.Content style={styles.cardContent}>
+                    {tool.svg}
+                  </Card.Content>
+                  <View style={styles.textContainer}>
+                    <Text style={styles.cardTitle}>{tool.title}</Text>
+                    <Text style={styles.cardSubtitle}>{tool.subtitle}</Text>
+                  </View>
+                </View>
+              </Card>
+            </TouchableOpacity>
+          ))}
+
           <TouchableOpacity
             style={styles.touchable}
             onPress={() => navigation.navigate('Resources')}
+            activeOpacity={0.7}
           >
-            <Card style={styles.orangeCard}>
-              <View style={styles.cardContainer}>
-                <Card.Content style={styles.cardContent}>
-                  <BreathingSvg />
-                </Card.Content>
-                <Card.Title
-                  title="Breathing"
-                  subtitle="Some text here"
-                  style={styles.cardTitle}
-                ></Card.Title>
-              </View>
-            </Card>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.touchable}
-            onPress={() => console.log('laughing')}
-          >
-            <Card style={styles.greenCard}>
-              <View style={styles.cardContainer}>
-                <Card.Content style={styles.cardContent}>
-                  <FeelingHappySvg />
-                </Card.Content>
-                <Card.Title
-                  title="Laughing"
-                  subtitle="Some text here"
-                  style={styles.cardTitle}
-                ></Card.Title>
-              </View>
-            </Card>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.touchable}
-            onPress={() => console.log('visualization')}
-          >
-            <Card style={styles.yellowCard}>
-              <View style={styles.cardContainer}>
-                <Card.Content style={styles.cardContent}>
-                  <FlowersSvg />
-                </Card.Content>
-                <Card.Title
-                  title="Visualization"
-                  subtitle="Some text here"
-                  style={styles.cardTitle}
-                ></Card.Title>
-              </View>
-            </Card>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.touchable}
-            onPress={() => console.log('moving')}
-          >
-            <Card style={styles.blueCard}>
-              <View style={styles.cardContainer}>
-                <Card.Content style={styles.cardContent}>
-                  <NatureBenefitsSvg />
-                </Card.Content>
-                <Card.Title
-                  title="Moving"
-                  subtitle="Some text here"
-                  style={styles.cardTitle}
-                ></Card.Title>
+            <Card style={[styles.resourceCard, { backgroundColor: colors.primary }]}>
+              <View style={styles.resourceCardContent}>
+                <Text style={styles.resourceTitle}>📚 Resources & Support</Text>
+                <Text style={styles.resourceSubtitle}>
+                  Find helpful information and connect with support
+                </Text>
               </View>
             </Card>
           </TouchableOpacity>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 15,
-    paddingBottom: 15,
-    backgroundColor: Colors.light.background,
-    marginTop: Constants.statusBarHeight,
   },
-  scrollView: {
-    marginHorizontal: 20,
+  scrollContent: {
+    padding: 20,
+    paddingBottom: 40,
   },
-  contentContainer: {
-    paddingTop: 15,
-    paddingBottom: 15,
-    backgroundColor: Colors.light.background,
+  header: {
+    marginBottom: 24,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: '600',
+    textAlign: 'center',
+    marginBottom: 8,
+  },
+  subtitle: {
+    fontSize: 15,
+    textAlign: 'center',
+    opacity: 0.7,
   },
   getStartedContainer: {
-    justifyContent: 'center',
-    marginHorizontal: 30,
-  },
-  getStartedText: {
-    fontSize: 24,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
-    textAlign: 'center',
-    marginBottom: 16,
+    gap: 16,
   },
   touchable: {
-    paddingTop: 30,
+    width: '100%',
+  },
+  card: {
+    width: '100%',
+    borderRadius: 16,
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
   },
   cardContainer: {
-    width: '100%',
-    flex: 1,
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    alignItems: 'flex-start',
-  },
-  cardTitle: {
-    width: '60%',
-    height: 100,
-    padding: 10,
+    alignItems: 'center',
+    padding: 16,
   },
   cardContent: {
     backgroundColor: 'transparent',
-    width: '39%',
-    height: 100,
-    padding: 10,
+    width: 80,
+    height: 80,
     justifyContent: 'center',
     alignItems: 'center',
+    marginRight: 16,
   },
-  purpleCard: {
-    backgroundColor: CardColors.purple,
-    width: '100%', // Required to make it work on Android
-    height: 100, //Required to make it work on Android
-    paddingLeft: 15,
-    paddingRight: 15,
+  textContainer: {
+    flex: 1,
+    justifyContent: 'center',
   },
-  pinkCard: {
-    backgroundColor: CardColors.pink,
+  cardTitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: '#3A3A3A',
+    marginBottom: 4,
+  },
+  cardSubtitle: {
+    fontSize: 14,
+    color: '#3A3A3A',
+    opacity: 0.8,
+  },
+  resourceCard: {
     width: '100%',
-    height: 100,
-    paddingLeft: 15,
-    paddingRight: 15,
+    borderRadius: 16,
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
   },
-  orangeCard: {
-    backgroundColor: CardColors.orange,
-    width: '100%',
-    height: 100,
-    paddingLeft: 15,
-    paddingRight: 15,
+  resourceCardContent: {
+    padding: 20,
+    alignItems: 'center',
   },
-  greenCard: {
-    backgroundColor: CardColors.green,
-    width: '100%',
-    height: 100,
-    paddingLeft: 15,
-    paddingRight: 15,
+  resourceTitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: '#FFFFFF',
+    marginBottom: 6,
+    textAlign: 'center',
   },
-  yellowCard: {
-    backgroundColor: CardColors.yellow,
-    width: '100%',
-    height: 100,
-    paddingLeft: 15,
-    paddingRight: 15,
-  },
-  blueCard: {
-    backgroundColor: CardColors.blue,
-    width: '100%',
-    height: 100,
-    paddingLeft: 15,
-    paddingRight: 15,
+  resourceSubtitle: {
+    fontSize: 14,
+    color: '#FFFFFF',
+    opacity: 0.9,
+    textAlign: 'center',
   },
 });

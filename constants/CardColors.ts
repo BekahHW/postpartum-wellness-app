@@ -1,8 +1,9 @@
+// Light, balanced, simple card colors that are inviting but not forced
 export default {
-  purple: "#b794f6",
-  pink: "#e98df5",
-  orange: "#ffc77d",
-  green: "#c3f69d",
-  yellow: "#f3f49d",
-  blue: "#8ccbff"
-  };
+  lavender: "#D4C5E8", // Soft lavender for calm
+  rose: "#F5D4DC", // Gentle rose for warmth
+  peach: "#FFE8D6", // Soft peach for comfort
+  sage: "#D9E8D8", // Soft sage for balance
+  cream: "#FFF8E7", // Warm cream for gentleness
+  sky: "#D9E8F5", // Soft sky blue for serenity
+};

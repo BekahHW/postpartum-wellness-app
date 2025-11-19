@@ -3,20 +3,15 @@ import {
   DefaultTheme,
   DarkTheme,
 } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
-// import HomeScreen from "../screens/HomeScreen";
 import SignInScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen';
-// import AffirmationScreen from "../screens/AffirmationScreen";
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
-import PositivityToolBoxScreen from '../screens/PositivityToolBoxScreen';
-import ContactFriendsScreen from '../screens/ContactFriendsScreen';
-import AffirmationScreen from '../screens/AffirmationScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
 // If you are not familiar with React Navigation, we recommend going through the
@@ -38,7 +33,7 @@ export default function Navigation({
 
 // A root stack navigator is often used for displaying modals on top of all other content
 // Read more here: https://reactnavigation.org/docs/modal
-const Stack = createStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
